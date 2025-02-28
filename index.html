@@ -19,94 +19,124 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
  >
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="./dist/css/styles.css">
 </head>
 <body>
-  <header>
-    <div><i></i><img src="" alt=""></div>
-    <form action=""><input type="text" name="" id=""></form>
+  <header class="header">
+      <div class="header__img-container effect-style-shadow-badge">
+        <button type="button" class="hidden">
+          <i></i>
+        </button>
+          <img src="./assets/icons/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood" class="header__img">
+      </div>
+    <form action="about:blank" class="header__form effect-style-shadow-badge">
+      <label for="search" class="visualy-hidden">Rechercher</label>
+      <div class="header__form__input-wrapper">
+        <i class="fa-solid fa-location-dot"></i><!-- Icône de location -->
+        <input type="text" name="search" id="search" placeholder="Paris,Belleville" class="text-style-button header__form__input" disabled>
+      </div>
+    </form>
   </header>
-  <main>
-    <section>
-      <h1></h1>
-      <p></p>
-      <button type="button"></button>
+  <main class="main">
+    <section class="section__reservez">
+      <h1 class="text-style-section-title section__reservez__title">Réservez le menu qui vous convient</h1>
+      <p class="text-style-paragraph section__reservez__paragraph">Découvrez des restaurants d'exception sélectionnés par nos soins</p>
+      <button type="button" class="section__reservez__button effect-style-shadow-button text-style-button">Explorer nos restaurants</button>
     </section>
-    <section>
-      <h2></h2>
-      <ul>
-        <li>
-          <span></span>
-          <h3></h3>
+    <section class="section__fonctionnement">
+      <h2 class="section__fonctionnement__title text-style-section-title ">Fonctionnement</h2>
+      <ul class="section__fonctionnement__list-container">
+        <li class="section__fonctionnement__list-item effect-style-shadow-button ">
+          <i class="fa-solid fa-mobile-screen-button section__fonctionnement__list-item__icon"></i>          
+          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+        </li>
+        <li class="section__fonctionnement__list-item effect-style-shadow-button ">
+          <i class="fa-solid fa-list-ul section__fonctionnement__list-item__icon"></i>          
+          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+        </li>
+        <li class="section__fonctionnement__list-item effect-style-shadow-button ">
+          <i class="fa-solid fa-store section__fonctionnement__list-item__icon"></i>          
+          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+        </li>
+      </ul>
+    </section>
+    <section class="section__restaurants">
+      <h2 class="section__restaurants__title text-style-section-title">Restaurants</h2>
+      <ul class="section__restaurants__list">
+        <li class="section__restaurants__list__item">
+          <article>
+            <a href="#Lapalettedugout">
+              <img src="./assets/images/resto-la-palette.webp" alt="image du restaurant la palette du goût à Ménilmontant" class="section__restaurants__list__img">
+              <div class="section__restaurants__list__item__informations">
+                <div class="section__restaurants__list__item__informations__text">
+                  <h3 class="text-style-menu-plate-title">La palette du goût</h3>
+                  <p class="text-style-paragraph">Ménilmontant</p>
+                </div>
+                <div class="heart-container">
+                  <input type="checkbox" id="heart" class="heart-checkbox">
+                  <label for="heart" class="heart-container">
+                      <i class="fa-regular fa-heart"></i>
+                  </label>                
+                </div>
+              </div>
+            </a>
+          </article>
         </li>
         <li>
-          <span></span>
-          <h3></h3>
+          <article>
+            <a href="">
+              <img src="" alt="">
+              <div>
+                <div>
+                  <h3></h3>
+                  <p></p>
+                </div>
+                <label>
+                  <input type="checkbox"><i></i>
+                  <div></div>
+                </label>
+              </div>
+            </a>
+          </article>
         </li>
         <li>
-          <span></span>
-          <h3></h3>
+          <article>
+            <a href="">
+              <img src="" alt="">
+              <div>
+                <div>
+                  <h3></h3>
+                  <p></p>
+                </div>
+                <label>
+                  <input type="checkbox"><i></i>
+                  <div></div>
+                </label>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="">
+              <img src="" alt="">
+              <div>
+                <div>
+                  <h3></h3>
+                  <p></p>
+                </div>
+                <label>
+                  <input type="checkbox"><i></i>
+                  <div></div>
+                </label>
+              </div>
+            </a>
+          </article>
         </li>
       </ul>
     </section>
   </main>
-  <section>
-    <h2></h2>
-    <article>
-      <img src="" alt="">
-      <div>
-        <div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <label class="icon-button" style="border: none; background: none; display: flex; align-items: center; justify-content: center; margin-left: 10px; cursor: pointer;" aria-label="Aimer">
-          <input type="checkbox" class="heart-checkbox" style="display: none;">
-          <i class="fas fa-heart" style="font-size: 24px; position: relative;"></i>
-          <div class="heart-fill"></div> <!-- Div pour l'animation de remplissage -->
-        </label>
-      </div>
-    </article>
-    <article>
-      <img src="" alt="">
-      <div>
-        <div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <label class="icon-button" style="border: none; background: none; display: flex; align-items: center; justify-content: center; margin-left: 10px; cursor: pointer;" aria-label="Aimer">
-          <input type="checkbox" class="heart-checkbox" style="display: none;">
-          <i class="fas fa-heart" style="font-size: 24px; position: relative;"></i>
-          <div class="heart-fill"></div> <!-- Div pour l'animation de remplissage -->
-        </label>
-      </div>
-    </article>
-    <article>
-      <img src="" alt="">
-      <div>
-        <div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <label class="icon-button" style="border: none; background: none; display: flex; align-items: center; justify-content: center; margin-left: 10px; cursor: pointer;" aria-label="Aimer">
-          <input type="checkbox" class="heart-checkbox" style="display: none;">
-          <i class="fas fa-heart" style="font-size: 24px; position: relative;"></i>
-          <div class="heart-fill"></div> <!-- Div pour l'animation de remplissage -->
-        </label>      </div>
-    </article>
-    <article>
-      <img src="" alt="">
-      <div>
-        <div>
-          <h3></h3>
-          <p></p>
-        </div>
-        <label class="icon-button" style="border: none; background: none; display: flex; align-items: center; justify-content: center; margin-left: 10px; cursor: pointer;" aria-label="Aimer">
-          <input type="checkbox" class="heart-checkbox" style="display: none;">
-          <i class="fas fa-heart" style="font-size: 24px; position: relative;"></i>
-          <div class="heart-fill"></div> <!-- Div pour l'animation de remplissage -->
-        </label>      </div>
-    </article>
-  </section>
   <footer>
     <img src="" alt="">
     <menu>

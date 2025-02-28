@@ -1,0 +1,100 @@
+/* +-----------------------------------------------------------+
+                     _Typography.scss FILE
++-----------------------------------------------------------+ */
+
+// ### --- Define Typography ---
+.text-style-logo {
+	font-size: 1.875rem;
+	font-family: Shrikhand;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+} 
+.text-style-logo-title {
+	font-size: 1.75rem;
+	font-family: Shrikhand;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-section-title {
+	font-size: 1.5rem;
+	font-family: Roboto;
+	font-weight: 700; 
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.text-style-paragraph {
+	font-size: 1.125rem;
+	font-family: Roboto;
+	font-weight: 300;
+	font-style: normal;
+	text-decoration: none;  
+	text-transform: none;
+}
+
+.text-style-button {
+	font-size: 1rem;
+	font-family: Roboto;
+	font-weight: 500;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.text-style-section-title-2 {
+	font-size: 1.125rem;
+	font-family: Roboto;
+	font-weight: 500;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.text-style-menu-plate-price {
+	font-size: 0.938rem;
+	font-family: Roboto;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+	
+}
+
+.text-style-menu-plate-title {
+	font-size: 1.125rem;
+	font-family: Roboto;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.text-style-menu-plate-details {
+	font-size: 0.938rem;
+	font-family: Roboto;
+	font-weight: 300;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.effect-style-shadow-badge {
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.150);
+}
+
+.effect-style-shadow-card {
+	box-shadow: 0px 4px 15px rgba(0,0,0,0.100);
+}
+
+.effect-style-shadow-button {
+	box-shadow: 0px 4px 10px rgba(0,0,0,0.250);
+}
+
+.effect-style-shadow-instructions {
+	box-shadow: 0px 4px 15px rgba(0,0,0,0.150);
+}

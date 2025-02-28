@@ -1,0 +1,325 @@
+/* +-----------------------------------------------------------+
+                        Homepage.scss FILE
++-----------------------------------------------------------+ */
+@use "../abstracts/variables" as v;
+
+// ### --- Header ---
+.header{
+    width:100%;
+
+    &__img-container{
+        display: inline-flex;
+        justify-content: center ;
+        width:100%;
+        padding-top: 0.875rem;
+        padding-bottom: 0.250rem ;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &__img{
+        width: 10rem;
+        height: 2.75rem;
+    }
+
+    &__form{
+        width:100%;
+        display: inline-flex;
+        justify-content: center;
+        padding: 0.875rem 0;
+        background-color: v.$color-grey-2;
+        position: relative;
+        z-index: 1;
+
+        &__input-wrapper{
+            display: inline-flex;
+            width:100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__input{
+            color: v.$color-grey;
+            background-color: v.$color-grey-2;
+            border: none;
+            text-align: center;
+            width: auto;
+
+            &::placeholder{
+                opacity: 100%;
+                color: v.$color-grey;
+            }
+        }
+    }
+
+    .fa-location-dot{
+        transform: translateX(250%);
+        color: v.$color-grey;
+        font-size: 1rem;
+    }
+}
+
+// ### --- Main ---
+.main {
+    width:100%;
+}
+
+// ### --- Section Réservez ---
+.section__reservez {
+    width:100%;
+    background-color: v.$color-background;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__title{
+        width: 70%;
+        line-height: 1;
+        margin:0;
+        padding-bottom: 0.875rem;
+    }
+
+    &__paragraph{
+        width:84%;
+        color: v.$color-grey;
+        margin:0;
+        padding-bottom: 0.5rem;
+    }
+
+    &__button{
+        margin-top: 1.75rem;
+        width:58%;
+        background-image: v.$color-button-gradient;
+        color:white;
+        padding: 0.875rem 1.125rem;
+        border: none;
+        border-radius: 2rem;
+        margin-bottom: 3.625rem;
+
+    }
+}
+
+// ### --- Section Fonctionnement ---
+.section__fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:100%;
+    background-color: v.$color-white;
+    padding: 3rem 1.25rem;
+
+    &__title{
+        line-height: 1;
+        margin: 0;
+    }
+
+    &__list-container{
+        margin-top: 1.5rem;
+        gap:1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style:none;
+        width:100%;
+        padding: 0;
+    }
+
+    &__list-item{
+        width:77%;
+        border-radius: 2rem;
+        background-color: v.$color-background;
+        margin-left: 0.75rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 2.125rem;
+        counter-increment: item;   
+
+
+        &__icon{
+            color: v.$color-grey-tint-4;
+            font-size: 1.25rem;
+            margin-right: 1.5rem;
+        }
+
+        &:nth-child(3) &__icon {  
+            color: v.$color-primary;  
+        }  
+
+        &::before{
+            content: ""; 
+            position: absolute; 
+            left: -0.75rem; 
+            top: 1.5rem; 
+            background-color:v.$color-primary; 
+            color: white; 
+            max-width: 25px;
+            width: 25px; 
+            max-height: 25px;
+            height: 25px;
+            border-radius: 50%; 
+            display: flex;
+            align-items: center;  
+            justify-content: center; 
+            line-height: 25px; 
+        }
+
+        &::after{
+            content: counter(item); 
+            left: -0.25rem; 
+            top: 1.6rem; 
+            position: absolute;   
+            color: white;   
+            font-family: Roboto;
+            font-size: 0.875rem;
+            line-height: 25px; 
+            font-family: Roboto;
+            font-size: 0.875rem;
+            font-weight: 500;
+
+        }
+
+        &__title{
+            padding: 1.75rem 0;
+            line-height: 1 ;
+            text-align: left;
+            margin: 0;
+        }
+    }
+}
+
+// ### --- Section Restaurants ---
+.section__restaurants{
+    background-color: v.$color-background;
+    padding: 3.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        line-height: 1;
+        margin: 0;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+        
+        &__img{
+            width:100%;
+            height: 10.875rem;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0 ;
+        }
+    }
+
+    &__list__item{
+        width: 100%;
+
+        article{
+            width:100%;
+
+        }
+
+        a {
+            display: block;
+
+        }
+
+        &__informations{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1rem 1.5rem 0 0.875rem;
+            background-color: v.$color-white;
+            border-radius: 0 0 1rem 1rem;
+
+    
+            &__text{
+                display: flex;
+                flex-direction: column;
+                gap: 0.125rem;
+                align-items: flex-start;    
+            }
+    
+            h3 , p{
+                line-height: 1.1;
+                padding: 0.125rem 0;
+                margin: 0;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+    }
+
+
+
+    }
+}
+
+// ### --- Conteneur du coeur ---
+.heart-checkbox {
+    display: none;
+}
+
+.heart-container {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    -webkit-mask-image: url("../../../assets/icons/heart-solid.svg");
+    mask-image: url("../../../assets/icons/heart-solid.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+}
+
+.heart-container i {
+    color: transparent; 
+    background-image: linear-gradient(to right,v.$color-black,v.$color-black ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    transition: background-image 0.3s ease; 
+}
+
+.heart-container:hover i  {
+    background-image: v.$color-button-gradient; 
+}
+
+.heart-checkbox:checked + .heart-container i {
+    background-image: v.$color-button-gradient; 
+}
+
+.heart-checkbox:checked + .heart-container:hover i {
+    background-image: v.$color-button-gradient; 
+}
+
+.heart-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: v.$color-button-gradient; 
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.heart-checkbox:checked + .heart-container::after {
+    transform: translateY(0);
+}
+
+.fa-heart:hover::before{
+    color: v.$color-button-gradient;
+}

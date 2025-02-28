@@ -1,0 +1,24 @@
+/* +-----------------------------------------------------------+
+                        Main.scss FILE
++-----------------------------------------------------------+ */
+
+// ### ---- IMPORTS ----
+@use "../abstracts/variables" as v;
+@use "../base/typography" as t;
+@use '../pages/home.scss';
+
+.hidden {
+    display: none;
+}
+
+.visualy-hidden{
+    visibility: hidden;
+    width:0.125rem;
+    height: 0.125rem;
+    display: block;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
