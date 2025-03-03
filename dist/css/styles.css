@@ -173,10 +173,9 @@
   text-align: center;
 }
 .section__reservez__title {
-  width: 70%;
   line-height: 1;
   margin: 0;
-  padding-bottom: 0.875rem;
+  padding: 0 3.8rem 0.875rem 2.75rem;
 }
 .section__reservez__paragraph {
   width: 84%;
@@ -186,7 +185,7 @@
 }
 .section__reservez__button {
   margin-top: 1.75rem;
-  width: 58%;
+  width: fit-content;
   background-image: linear-gradient(to bottom, rgb(255, 121, 218) 0%, rgba(147, 86, 220, 0.576) 100%);
   color: white;
   padding: 0.875rem 1.125rem;
@@ -208,7 +207,7 @@
   margin: 0;
 }
 .section__fonctionnement__list-container {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   gap: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -276,7 +275,7 @@
 
 .section__restaurants {
   background-color: rgb(246, 246, 246);
-  padding: 3.75rem 1.25rem;
+  padding: 3.75rem 1.25rem 4.5rem 1.25rem;
   display: flex;
   flex-direction: column;
 }
@@ -291,13 +290,36 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  gap: 1.25rem;
+}
+.section__restaurants__list__img-container {
+  position: relative;
+  width: 100%;
+  height: 10.875rem;
+}
+.section__restaurants__list__img-container::after {
+  position: absolute;
+  content: "Nouveau";
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  width: fit-content;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  padding: 7px 9px 5px 9px;
+  top: 0.875rem;
+  right: 0.75rem;
+  z-index: 99;
+  border-radius: 0.125rem;
 }
 .section__restaurants__list__img {
   width: 100%;
   height: 10.875rem;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+  display: block;
+  z-index: 1;
 }
 .section__restaurants__list__item {
   width: 100%;
@@ -312,14 +334,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1.5rem 0 0.875rem;
+  padding: 0.875rem 1.5rem 0 0.875rem;
   background-color: rgb(255, 255, 255);
   border-radius: 0 0 1rem 1rem;
 }
 .section__restaurants__list__item__informations__text {
   display: flex;
   flex-direction: column;
-  gap: 0.125rem;
   align-items: flex-start;
 }
 .section__restaurants__list__item__informations h3, .section__restaurants__list__item__informations p {
@@ -328,7 +349,7 @@
   margin: 0;
 }
 .section__restaurants__list__item__informations p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .heart-checkbox {
@@ -383,8 +404,40 @@
   transform: translateY(0);
 }
 
-.fa-heart:hover::before {
-  color: linear-gradient(to bottom, rgb(255, 121, 218) 0%, rgba(147, 86, 220, 0.576) 100%);
+.footer {
+  background-color: rgb(53, 53, 53);
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.footer__img {
+  width: 6.25rem;
+  filter: invert(100%);
+}
+.footer__menu {
+  list-style: none;
+  gap: 0.5rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 1.25rem;
+}
+.footer__menu__icon-1 {
+  font-size: 0.875rem;
+  margin-right: 0.625rem;
+}
+.footer__menu__icon-2 {
+  margin-right: 0.125rem;
+  font-size: 1rem;
+}
+.footer__menu__item {
+  display: inline-flex;
+  align-items: center;
+}
+.footer__menu__item h4 {
+  margin: 0;
+  line-height: 1.2;
+  padding: 0;
 }
 
 .hidden {

@@ -49,25 +49,27 @@
       <ul class="section__fonctionnement__list-container">
         <li class="section__fonctionnement__list-item effect-style-shadow-button ">
           <i class="fa-solid fa-mobile-screen-button section__fonctionnement__list-item__icon"></i>          
-          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+          <strong class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</strong>
         </li>
         <li class="section__fonctionnement__list-item effect-style-shadow-button ">
           <i class="fa-solid fa-list-ul section__fonctionnement__list-item__icon"></i>          
-          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+          <strong class="section__fonctionnement__list-item__title text-style-button">Composez votre menu</strong>
         </li>
         <li class="section__fonctionnement__list-item effect-style-shadow-button ">
           <i class="fa-solid fa-store section__fonctionnement__list-item__icon"></i>          
-          <h3 class="section__fonctionnement__list-item__title text-style-button">Choisissez un restaurant</h3>
+          <strong class="section__fonctionnement__list-item__title text-style-button">Dégustez au restaurant</strong>
         </li>
       </ul>
     </section>
-    <section class="section__restaurants">
+    <section class="section__restaurants" id="sectionRestaurant">
       <h2 class="section__restaurants__title text-style-section-title">Restaurants</h2>
       <ul class="section__restaurants__list">
         <li class="section__restaurants__list__item">
+          <a href="#Lapalettedugout">
           <article>
-            <a href="#Lapalettedugout">
-              <img src="./assets/images/resto-la-palette.webp" alt="image du restaurant la palette du goût à Ménilmontant" class="section__restaurants__list__img">
+              <div class="section__restaurants__list__img-container">
+                <img src="./assets/images/resto-la-palette.webp" alt="image du restaurant la palette du goût à Ménilmontant" class="section__restaurants__list__img">
+              </div>
               <div class="section__restaurants__list__item__informations">
                 <div class="section__restaurants__list__item__informations__text">
                   <h3 class="text-style-menu-plate-title">La palette du goût</h3>
@@ -80,79 +82,91 @@
                   </label>                
                 </div>
               </div>
-            </a>
           </article>
+        </a>
         </li>
-        <li>
+        <li class="section__restaurants__list__item">
+          <a href="#Lanoteenchantée">
           <article>
-            <a href="">
-              <img src="" alt="">
-              <div>
-                <div>
-                  <h3></h3>
-                  <p></p>
-                </div>
-                <label>
-                  <input type="checkbox"><i></i>
-                  <div></div>
-                </label>
+              <div class="section__restaurants__list__img-container">
+                <img src="./assets/images/resto-la-note.webp" alt="image du restaurant La note enchantée à Charonne" class="section__restaurants__list__img">
               </div>
-            </a>
+              <div class="section__restaurants__list__item__informations">
+                <div class="section__restaurants__list__item__informations__text">
+                  <h3 class="text-style-menu-plate-title">La note enchantée</h3>
+                  <p class="text-style-paragraph">Charonne</p>
+                </div>
+                <div class="heart-container">
+                  <input type="checkbox" id="heart2" class="heart-checkbox">
+                  <label for="heart2" class="heart-container">
+                      <i class="fa-regular fa-heart"></i>
+                  </label>                
+                </div>
+              </div>
           </article>
+        </a>
         </li>
-        <li>
+        <li class="section__restaurants__list__item">
+          <a href="#Alafrançaise">
           <article>
-            <a href="">
-              <img src="" alt="">
-              <div>
-                <div>
-                  <h3></h3>
-                  <p></p>
-                </div>
-                <label>
-                  <input type="checkbox"><i></i>
-                  <div></div>
-                </label>
+              <div class="section__restaurants__list__img-container">
+                <img src="./assets/images/resto-a-la-francaise.webp" alt="image du restaurant À la française à Cité Rouge" class="section__restaurants__list__img">
               </div>
-            </a>
+              <div class="section__restaurants__list__item__informations">
+                <div class="section__restaurants__list__item__informations__text">
+                  <h3 class="text-style-menu-plate-title">À la française</h3>
+                  <p class="text-style-paragraph">Cité Rouge</p>
+                </div>
+                <div class="heart-container">
+                  <input type="checkbox" id="heart3" class="heart-checkbox">
+                  <label for="heart3" class="heart-container">
+                      <i class="fa-regular fa-heart"></i>
+                  </label>                
+                </div>
+              </div>
           </article>
+        </a>
         </li>
-        <li>
+        <li class="section__restaurants__list__item">
+          <a href="#ledélicedessens">
           <article>
-            <a href="">
-              <img src="" alt="">
-              <div>
-                <div>
-                  <h3></h3>
-                  <p></p>
-                </div>
-                <label>
-                  <input type="checkbox"><i></i>
-                  <div></div>
-                </label>
+              <div class="section__restaurants__list__img-container">
+                <img src="./assets/images/resto-le-delice.webp" alt="image du restaurant le délice des sens" class="section__restaurants__list__img">
               </div>
-            </a>
+              <div class="section__restaurants__list__item__informations">
+                <div class="section__restaurants__list__item__informations__text">
+                  <h3 class="text-style-menu-plate-title">Le délice des sens</h3>
+                  <p class="text-style-paragraph">Folie-Méricourt</p>
+                </div>
+                <div class="heart-container">
+                  <input type="checkbox" id="heart4" class="heart-checkbox">
+                  <label for="heart4" class="heart-container">
+                      <i class="fa-regular fa-heart"></i>
+                  </label>                
+                </div>
+              </div>
           </article>
+        </a>
         </li>
       </ul>
     </section>
   </main>
-  <footer>
-    <img src="" alt="">
-    <menu>
-      <li>
-        <i></i>
-        <h4></h4>
+  <footer class="footer">
+    <img src="./assets/icons/ohmyfood.png" alt="logo ohmyfood" class="footer__img">
+    <menu class="footer__menu">
+      <li class="footer__menu__item">
+        <i class="fa-solid fa-utensils footer__menu__icon-1" ></i>
+        <h4 class="text-style-button">Proposer un restaurant</h4>
       </li>
-      <li>
-        <i></i>
-        <h4></h4>
+      <li class="footer__menu__item">
+        <i class="fa-solid fa-handshake-simple footer__menu__icon-2"></i>
+        <h4 class="text-style-button">Devenir partenaire</h4>
       </li>
-      <li>
-        <h4></h4>
+      <li class="footer__menu__item">
+        <h4 class="text-style-button">Mentions légales</h4>
       </li>
-      <li>       
-         <h4></h4>
+      <li class="footer__menu__item">       
+         <h4 class="text-style-button">Contact</h4>
       </li>
     </menu>
   </footer>
