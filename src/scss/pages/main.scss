@@ -7,6 +7,13 @@
 @use "../base/typography" as t;
 @use '../pages/home.scss';
 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .hidden {
     display: none;
 }

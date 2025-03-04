@@ -3,12 +3,6 @@
 +-----------------------------------------------------------+ */
 @use "../abstracts/variables" as v;
 
-// body{
-//     // background-image: url("../../../assets/images/ref\ homepage.png");
-//     background-position: top;
-//     background-repeat: no-repeat;
-//     opacity: 60%;
-// }
 // ### --- Header ---
 .header{
     width:100%;
@@ -130,10 +124,9 @@
         list-style:none;
         width:100%;
         padding: 0;
-    }
+        }
 
     &__list-item{
-        width:77%;
         border-radius: 2rem;
         background-color: v.$color-background;
         margin-left: 0.75rem;
@@ -143,7 +136,7 @@
         justify-content: flex-start;
         padding-left: 2.125rem;
         counter-increment: item;   
-
+    
 
         &__icon{
             color: v.$color-grey-tint-4;
@@ -377,8 +370,8 @@
         }
 
         &__icon-2{
-            margin-right: 0.125rem;
-            font-size:1rem;
+            font-size:0.875rem;
+            margin-right: 0.3rem;
 
         }
 
@@ -394,4 +387,176 @@
         }
     }
 }
+
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - Tablette -
++-----------------------------------------------------------+ */
+@media (min-width: 768px){
+    .section__fonctionnement h2{
+        padding-left: 5%;
+    }
+
+    .section__fonctionnement__list-container {
+        gap: 0.6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 5%;
+        align-items: center;
+    }
+
+    .section__fonctionnement__list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 2.125rem;
+        flex: 1 1;
+    }
+
+    .section__restaurants h2{
+        padding-left: 5%;
+    }
+
+    .section__restaurants__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 1.5rem;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        padding: 0 5%;
+        column-gap: 3.5rem;
+        row-gap: 1.5rem;
+
+
+            &__item{
+            width: 100%;
+            flex: 1 1 40%;
+            }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        &__menu{
+        list-style: none;
+        gap: 0.5rem;
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin-top: 1.25rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+            &__item{
+                align-items: center;
+                flex: 1 1 auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .section__fonctionnement {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 3rem 1.25rem;
+
+        & h2 {
+            padding-left: 8%;
+        }
+
+        &__list-container {
+            gap: 1.125rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 8%;
+            align-items: center;
+        }
+    
+    }
+
+    .section__restaurants h2{
+        padding-left: 8%;
+    }
+
+    .section__restaurants__list {
+        padding: 0 8%;
+        column-gap: 6.25rem;
+        row-gap: 3.125rem;
+
+        &__list__item {
+            width: 100%;
+            flex: 1 1 40%;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 2rem;
+
+        &__menu {
+            list-style: none;
+            gap: 0.5rem;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            padding: 0 3rem;
+            margin-top: 1.25rem;
+            align-items: center;
+            justify-content: center;
+            width: 66%;
+
+            .footer__menu__item {
+                align-items: center;
+                flex: 1 1 auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px){
+    .section__reservez h1{
+        font-size: 2.5rem;
+    }
+
+    .section__fonctionnement h2{
+        padding-left: 12%;
+    }
+
+    .section__fonctionnement__list-container {
+        padding: 0 12%;
+    }
+
+    .section__restaurants h2{
+        padding-left: 12%;
+    }
+
+    .section__restaurants__list{
+        padding: 0 12%;
+
+    } 
+
+}
+
 
