@@ -1,0 +1,151 @@
+/* +-----------------------------------------------------------+
+                       Menu.scss FILE
++-----------------------------------------------------------+ */
+@use "../abstracts/variables" as v;
+@use "../base/typography" as t;
+
+.menu{
+
+// ### --- Header ---
+    &__header{ 
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+            &__logo-and-button{
+            display: flex;
+            align-items: center ;
+            width:100%;
+            padding-top: 0.875rem;
+            padding-bottom: 0.250rem ;
+            justify-content: center;
+            }
+            
+        
+            &__button{
+                background-color: transparent;
+                border: none;
+                margin-left: 0;
+                transform: translateX(1.5rem);
+                cursor: pointer;
+                width: 1.125rem;
+                height: 1rem;
+                margin-bottom: 0.625rem;
+            }
+
+            &__logo{
+                width: 10rem;
+                height: 2.75rem;
+                margin: 0 auto;
+            }
+
+            &__img{
+                width:100%;
+                height: 17.125rem;
+                object-fit: cover;
+                flex-shrink: 1;
+                max-width: 100%;
+
+            }
+        }
+
+// ### --- Main ---
+    &__main{  
+        width:100%;
+        padding: 2rem 0.875rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: v.$color-background;
+        transform: translateY(-2rem);
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        &__title-container{
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            flex: 1 1 0;
+
+            & h1{
+                margin: 0;
+                line-height: 1.5;
+                padding: 0;
+                font-size: clamp(1rem, 7.5vw, 1.75rem);
+                min-width: 0;
+            }
+
+            & .heart-containers{
+                margin-right: 1.75rem;
+                min-width: 0;
+            }
+        }
+
+        &__sections{
+            display: flex;
+            flex-direction: column;
+
+            &__title{
+                border:2px solid transparent;
+                position: relative;
+                padding-bottom: 0.5rem;
+                text-transform: uppercase;
+
+                &::after{
+                    content: "";
+                    width: 40px;
+                    height: 2px;
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                    background-color: v.$color-green;
+                }
+            }
+
+            &__list{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+
+                &__items{
+                    padding: 0.875rem;
+                    margin: 0;
+                    background-color: v.$color-white;
+                    border-radius: 1rem;
+                }
+            }
+
+            &__meal__name{
+                padding: 0;
+                margin: 0;
+                line-height: 1;
+            }
+
+            &__meal__informations{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 0.5rem ;
+
+                &__ingredients{
+                    margin: 0;
+                    padding: 0 ;
+                    line-height: 1;
+                }
+
+                &__price{
+                    color: v.$color-grey;
+                }
+            }
+        }
+    }
+}
+
