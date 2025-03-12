@@ -5,8 +5,6 @@
 @use "../base/typography" as t;
 
 .menu{
-    max-height: 1590px;
-    overflow: hidden;
 // ### --- Header ---
     &__header{ 
         width:100%;
@@ -88,6 +86,7 @@
                 font-size: clamp(1rem, 7.5vw, 1.75rem);
                 min-width: 0;
                 flex-shrink: 1;
+                padding-left: 0.3em;
             }
 
             & .heart-containers{
@@ -190,7 +189,7 @@
         }
     }
 
-// ### --- Main ---
+// ### --- Footer ---
     &__footer{
         background-color: v.$color-grey;
         width: 100%;
@@ -229,7 +228,7 @@
                 }
             }
 
-            &__item-grid{
+            &__item-grid a{
                 display: grid;
                 grid-template-columns: 1.25rem auto;
                 align-items: center;
