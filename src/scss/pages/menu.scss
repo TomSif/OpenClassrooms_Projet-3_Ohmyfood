@@ -139,7 +139,12 @@
                     border-radius: 1rem;
                     flex: 1 1 0;
                     flex-wrap: wrap;
-                    box-shadow: v.$shadow-box
+                    box-shadow: v.$shadow-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                
                 }
             }
 
@@ -158,6 +163,7 @@
                 padding-top: 0.375rem ;
                 flex: 1 1 0;
                 flex-wrap: wrap;
+                width:100%;
     
 
                 &__ingredients{
@@ -175,6 +181,7 @@
             }
         }
 
+        
         &__button{
             background: v.$color-button-gradient;
             padding: 1.125rem 3.125rem;
@@ -245,4 +252,3 @@
     }
 
 }
-

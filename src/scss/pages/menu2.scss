@@ -1,0 +1,382 @@
+/* +-----------------------------------------------------------+
+                       Menu.scss FILE
++-----------------------------------------------------------+ */
+@use "../abstracts/variables" as v;
+@use "../base/typography" as t;
+
+.menu{
+    position: relative;
+// ### --- Header ---
+    &__header{ 
+        width:100%;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+            &__logo-and-button{
+            display: flex;
+            align-items: center ;
+            width:100%;
+            padding-top: 0.875rem;
+            padding-bottom: 0.250rem ;
+            justify-content: center;
+            }
+            
+        
+            &__button{
+                background-color: transparent;
+                border: none;
+                margin-left: 0;
+                transform: translateX(1.5rem);
+                cursor: pointer;
+                width: 1.125rem;
+                height: 1rem;
+                margin-bottom: 0.625rem;
+            }
+
+            &__logo{
+                width: 10rem;
+                height: 2.75rem;
+                margin: 0 auto;
+            }
+
+            &__img{
+                width:100%;
+                height: 17.125rem;
+                object-fit: cover;
+                flex-shrink: 1;
+                max-width: 100%;
+                object-fit: cover;
+                -webkit-overflow-clip-margin: content-box; 
+                overflow-clip-margin: content-box;
+            }
+        }
+
+// ### --- Main ---
+    &__main{  
+        width:100%;
+        padding: 2rem 0.875rem 2.4rem 0.875rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: v.$color-background;
+        margin-top: -3.4rem;
+        position: relative;
+        z-index: 99;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &__title-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            flex: 1 1 0;
+            flex-wrap: wrap;
+            margin-bottom: -1rem;
+
+            & h1{
+                margin: 0;
+                line-height: 1.5;
+                padding: 0;
+                font-size: clamp(1rem, 7.5vw, 1.75rem);
+                min-width: 0;
+                flex-shrink: 1;
+                padding-left: 0.3em;
+            }
+
+            & .heart-containers{
+                margin-right: 1.75rem;
+                min-width: 0;
+                flex-shrink: 1;
+            }
+        }
+
+        &__sections{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+
+            &__title{
+                border:3px solid transparent;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                padding-bottom: 0.5rem;
+                text-transform: uppercase;
+
+                &::after{
+                    content: "";
+                    width: 40px;
+                    height: 3px;
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                    background-color: v.$color-green;
+                }
+            }
+
+            &__list{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-top: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width:100%;
+
+                &__items{
+                    margin: 0;
+                    background-color: v.$color-white;
+                    border-radius: 1rem;
+                    box-shadow: v.$shadow-box;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    opacity: 0;
+                    animation: slideFromLeft 0.5s ease forwards;
+                    
+                      &__label {
+                          overflow: hidden;
+                          cursor: pointer;
+                          transition: background-color 0.3s;
+                          width:100%;
+
+                          &:hover {
+                            background-color: #f5f5f5;
+                        }
+                      }
+
+                      &__wrapper {
+                          display: flex;
+                          width: 100%;
+                          min-width: 0;
+                          overflow: hidden;
+                          border-radius: 1rem;
+                      }
+              
+                      &__content {
+                          display: flex;
+                          align-items: flex-end;
+                          padding: 0.875rem;
+                          width: 100%;
+                          transition: width 0.3s ease;
+                      }
+              
+                      &__details {
+                          flex: 1;
+                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+                          display: flex;
+                          flex-direction: column;
+                      }
+              
+                      &__detail-title {
+                          font-weight: bold;
+                          margin-bottom: 5px;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          flex: 1;
+                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+
+                      }
+              
+                      &__detail-description {
+                          color: v.$color-grey;
+                          font-size: 0.9em;
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          flex: 1;
+                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+                      }
+              
+                      &__content-price {
+                          margin-left: 15px;
+                          white-space: nowrap;
+                          color:v.$color-grey;
+                      }
+              
+                      &__chek-container {
+                          width: 0;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          background-color: v.$color-green;
+                          transition: width 0.3s ease;
+                          overflow: hidden;
+                          border-radius: 0 1rem 1rem 0;
+                      }
+              
+                      &__chek {
+                          width: 20px;
+                          height: 20px;
+                          color: v.$color-green;
+                          font-size: 1rem;
+                          font-weight: bold;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          background-color: v.$color-white;
+                          border-radius: 50%;
+                      }
+              
+                      .menu__items-checkbox {
+                          position: absolute;
+                          opacity: 0;
+                          cursor: pointer;
+                          display: none;
+                      }
+              
+                      /* Effet au survol sur desktop */
+                      &__label:hover .menu__main__sections__list__items__chek-container {
+                          width: 60px;
+                          border-radius: 0 1rem 1rem 0;
+                      }
+                      
+                      &__label:hover .menu__main__sections__list__items__content {
+                          width: calc(100% - 60px);
+                          border-radius: 0 1rem 1rem 0;
+                      }
+              
+                      /* Effet quand la checkbox est cochée */
+                      .menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__chek-container {
+                          width: 60px;
+                          border-radius: 0 1rem 1rem 0;
+                      }
+                      
+                      .menu__items-checkbox:checked  ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__content {
+                          width: calc(100% - 60px);
+                          border-radius: 0 1rem 1rem 0;
+                      }
+                }
+            }
+    }
+
+    &__button{
+        background: v.$color-button-gradient;
+        padding: 1.125rem 3.125rem;
+        line-height: 1;
+        width: fit-content;
+        border: none;
+        border-radius: 1.5rem;
+        color: v.$color-white;
+        margin: auto;
+        cursor: pointer;
+        box-shadow: v.$shadow-btn;
+        position: relative;
+    }
+
+    &__button::after{
+        content:'';
+        position: absolute;
+        opacity: 0%;
+        background-color: v.$color-white;
+        width:100%;
+        top:0;
+        left:0;
+        height:100%;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 10px 10px rgb(0,0,0,0.35);
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &__button:hover::after{
+        opacity: 15%;
+    }
+
+
+}
+
+// ### --- Footer ---
+    &__footer{
+        background-color: v.$color-grey;
+        width: 100%;
+        color:v.$color-white;
+        position: relative;
+        z-index: 100;
+        padding: 1.5rem;
+        padding-bottom: 0.375rem;
+
+        &__img{
+            width: 6.25rem;
+            filter: invert(100%);
+            }
+
+        &__list{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: rgb(255, 255, 255);
+            display: flex;
+            padding: 0;
+            margin-top: 1.25rem;
+            align-items: flex-start;
+            justify-content: center;
+
+            &__item{
+                line-height: 1;
+                padding: 0;
+
+
+                & h4{
+                    line-height: 1.2;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            &__item-grid a{
+                display: grid;
+                grid-template-columns: 1.25rem auto;
+                align-items: center;
+                column-gap: 0.5rem;
+
+                & h4{
+                    line-height: 1.2;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// ### --- Animation liste---
+@keyframes slideFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+    
+  // Variables pour contrôler l'animation
+  $base-delay: 150ms; // Délai entre chaque élément
+  $section-delay: 500ms; // Délai supplémentaire entre les sections
+  
+  // Boucle pour les sections
+  @for $section from 1 through 3 {
+    .menu__main__sections:nth-of-type(#{$section}) {
+      // Délai de base pour cette section
+      $section-base-delay: ($section - 1) * $section-delay;
+      
+      // Boucle pour les éléments dans chaque section
+      @for $item from 1 through 20 { // Support jusqu'à 20 éléments par section
+        .menu__main__sections__list__items:nth-child(#{$item}) {
+          animation-delay: #{$section-base-delay + ($item * $base-delay)};
+        }
+      }
+    }
+  }
+  

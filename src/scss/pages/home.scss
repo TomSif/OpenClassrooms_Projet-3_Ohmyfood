@@ -149,10 +149,9 @@
         }  
 
         &::before{
-            content: ""; 
+            content: counter(item); 
             position: absolute; 
             left: -0.75rem; 
-            top: 1.5rem; 
             background-color:v.$color-primary; 
             color: white; 
             max-width: 25px;
@@ -164,21 +163,10 @@
             align-items: center;  
             justify-content: center; 
             line-height: 25px; 
-        }
-
-        &::after{
-            content: counter(item); 
-            left: -0.25rem; 
-            top: 1.6rem; 
-            position: absolute;   
-            color: white;   
             font-family: Roboto;
             font-size: 0.875rem;
             line-height: 25px; 
-            font-family: Roboto;
-            font-size: 0.875rem;
             font-weight: 500;
-
         }
 
         &__title{
@@ -560,3 +548,80 @@
 }
 
 
+  // ### --- Animation loader---
+
+  $loader-width: 100%;
+$animation-loader-duration: 3s;
+$animation-letter-duration: 1s;
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  width: $loader-width;
+  overflow: hidden;
+  z-index: 9999;
+  animation: fade-out $animation-loader-duration linear forwards;
+  background-color: white;
+
+  .letter {
+    font-size: 3rem;
+    font-family:  'Shrikhand';
+    font-weight: 400;
+    opacity: 0;
+    position: relative;
+    animation: letter-animation $animation-letter-duration infinite;
+    background-color: transparent;
+    height: auto;
+    color: transparent;
+    transform: translateX(-100%);
+    background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    width: fit-content;
+    overflow: visible;
+    background-color: transparent;
+
+
+
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * calc($animation-letter-duration / 8);
+      }
+    }
+  }
+}
+@keyframes letter-animation {
+    0% {
+      opacity: 0;
+      background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
+    }
+    20%, 80% {
+      opacity: 1;
+      transform: translateY(0);
+      background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
+
+    }
+    100% {
+    opacity: 0;
+    background-image: linear-gradient(45deg, rgba(238, 255, 6, 0.8) 100%, rgb(0, 90, 38) 150%);
+    transform: translateX(100%);
+    }
+}
+
+@keyframes fade-out {
+    0%, 90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
