@@ -245,6 +245,24 @@
   border: none;
   border-radius: 2rem;
   margin-bottom: 3.625rem;
+  cursor: pointer;
+  position: relative;
+}
+.section__reservez__button::after {
+  content: "";
+  position: absolute;
+  opacity: 0%;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.2s ease-in-out;
+}
+.section__reservez__button:hover::after {
+  opacity: 0.17;
 }
 
 .section__fonctionnement {
@@ -584,11 +602,15 @@
     flex: 1 1 40%;
   }
   .footer {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
     align-items: center;
-    justify-content: flex-start;
     padding-right: 2rem;
+    position: relative;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+  }
+  .footer__img {
+    grid-column-start: 2;
   }
   .footer__menu {
     list-style: none;
@@ -596,17 +618,17 @@
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
-    padding: 0 3rem;
+    padding: 0 clamp(1.5rem, 45%, 3rem);
     margin-top: 1.25rem;
-    align-items: center;
-    justify-content: center;
-    width: 66%;
+    width: clamp(10rem, 100%, 50rem);
+    grid-row: 1;
+    justify-self: self-end;
   }
-  .footer__menu .footer__menu__item {
+  .footer .footer__menu__item {
     align-items: center;
     flex: 1 1 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1440px) {
@@ -718,6 +740,9 @@
 +-----------------------------------------------------------+ */
 .menu {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .menu__header {
   width: 100%;
@@ -762,6 +787,9 @@
   -webkit-overflow-clip-margin: content-box;
   overflow-clip-margin: content-box;
 }
+.menu .menu__main section, .menu .menu__main__title-container {
+  max-width: 630px;
+}
 .menu__main {
   width: 100%;
   padding: 2rem 0.875rem 2.4rem 0.875rem;
@@ -775,6 +803,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   gap: 2.4rem;
+  max-width: 66rem;
+  align-items: center;
 }
 .menu__main__title-container {
   display: flex;
@@ -847,11 +877,7 @@
 .menu__main__sections__list__items__label {
   overflow: hidden;
   cursor: pointer;
-  transition: background-color 0.3s;
   width: 100%;
-}
-.menu__main__sections__list__items__label:hover {
-  background-color: #f5f5f5;
 }
 .menu__main__sections__list__items__wrapper {
   display: flex;
@@ -869,7 +895,7 @@
 }
 .menu__main__sections__list__items__details {
   flex: 1;
-  min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
@@ -880,7 +906,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
-  min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+  min-width: 0;
 }
 .menu__main__sections__list__items__detail-description {
   color: rgb(53, 53, 53);
@@ -889,7 +915,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
-  min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+  min-width: 0;
 }
 .menu__main__sections__list__items__content-price {
   margin-left: 15px;
@@ -1026,188 +1052,245 @@
   }
 }
 .menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 150ms;
+  animation-delay: 200ms;
 }
 .menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(2) {
-  animation-delay: 300ms;
+  animation-delay: 400ms;
 }
 .menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 450ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(4) {
   animation-delay: 600ms;
 }
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 750ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(6) {
-  animation-delay: 900ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 1050ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(8) {
-  animation-delay: 1200ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 1350ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 1500ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 1650ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(12) {
-  animation-delay: 1800ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 1950ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 2100ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 2250ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(16) {
-  animation-delay: 2400ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 2550ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 2700ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 2850ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(20) {
-  animation-delay: 3000ms;
-}
-
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 650ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(2) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(4) {
   animation-delay: 800ms;
 }
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 950ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 1000ms;
 }
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(4) {
-  animation-delay: 1100ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 1200ms;
 }
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 1250ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(6) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(7) {
   animation-delay: 1400ms;
 }
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 1550ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(8) {
-  animation-delay: 1700ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 1850ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 2000ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 2150ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(12) {
-  animation-delay: 2300ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 2450ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 2600ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 2750ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(16) {
-  animation-delay: 2900ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 3050ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 3200ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 3350ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(20) {
-  animation-delay: 3500ms;
-}
-
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 1150ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(2) {
-  animation-delay: 1300ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 1450ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(4) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(8) {
   animation-delay: 1600ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 1750ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 1800ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(6) {
-  animation-delay: 1900ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 2000ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 2050ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(8) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(11) {
   animation-delay: 2200ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 2350ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 2400ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 2500ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 2600ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 2650ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(12) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(14) {
   animation-delay: 2800ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 2950ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 3000ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 3100ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 3200ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 3250ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(16) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(17) {
   animation-delay: 3400ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 3550ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 3600ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 3700ms;
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 3800ms;
 }
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 3850ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(20) {
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(20) {
   animation-delay: 4000ms;
 }
 
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(1) {
+  animation-delay: 900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(2) {
+  animation-delay: 1100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(3) {
+  animation-delay: 1300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(4) {
+  animation-delay: 1500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 1700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 1900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(7) {
+  animation-delay: 2100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(8) {
+  animation-delay: 2300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 2500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 2700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(11) {
+  animation-delay: 2900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 3100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 3300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(14) {
+  animation-delay: 3500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 3700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 3900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(17) {
+  animation-delay: 4100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 4300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 4500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(20) {
+  animation-delay: 4700ms;
+}
+
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(1) {
+  animation-delay: 1600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(2) {
+  animation-delay: 1800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(3) {
+  animation-delay: 2000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(4) {
+  animation-delay: 2200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 2400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 2600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(7) {
+  animation-delay: 2800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(8) {
+  animation-delay: 3000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 3200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 3400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(11) {
+  animation-delay: 3600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 3800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 4000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(14) {
+  animation-delay: 4200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 4400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 4600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(17) {
+  animation-delay: 4800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 5000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 5200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(20) {
+  animation-delay: 5400ms;
+}
+
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - Tablette -
++-----------------------------------------------------------+ */
+@media (min-width: 768px) {
+  .menu__main {
+    width: 100%;
+    padding: 2rem 5% 2.4rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__footer {
+    display: grid;
+    align-items: center;
+    padding-right: 2rem;
+    position: relative;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+  }
+  .menu__footer__img {
+    grid-column-start: 2;
+  }
+  .menu__footer__list {
+    list-style: none;
+    gap: 0.5rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    padding: 0 clamp(1.5rem, 2%, 3rem);
+    margin-top: 1.25rem;
+    width: clamp(10rem, 100%, 50rem);
+    grid-row: 1;
+    justify-self: self-end;
+    justify-content: flex-end;
+  }
+}
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1024px) {
+  .menu__main {
+    width: 100%;
+    padding: 2rem clamp(2rem, 10%, 13.125rem) 2.4rem clamp(2rem, 10%, 13.125rem);
+  }
+  .menu__footer__list {
+    padding: 0 clamp(1.5rem, 45%, 3rem);
+  }
+}
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - large desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1440px) {
+  .menu__main {
+    width: 100%;
+    padding: 2rem clamp(2rem, 100%, 13.125rem) 2.4rem clamp(2rem, 100%, 13.125rem);
+  }
+}
 *,
 *::before,
 *::after {

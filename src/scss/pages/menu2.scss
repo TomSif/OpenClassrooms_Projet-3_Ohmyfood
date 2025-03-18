@@ -6,6 +6,9 @@
 
 .menu{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 // ### --- Header ---
     &__header{ 
         width:100%;
@@ -57,6 +60,10 @@
         }
 
 // ### --- Main ---
+    .menu__main  section, .menu__main__title-container{
+    max-width: 630px;
+    }
+
     &__main{  
         width:100%;
         padding: 2rem 0.875rem 2.4rem 0.875rem;
@@ -70,6 +77,8 @@
         flex-wrap: wrap;
         flex-direction: column;
         gap: 2.4rem;
+        max-width: 66rem;
+        align-items: center;
 
         &__title-container{
             display: flex;
@@ -145,12 +154,7 @@
                       &__label {
                           overflow: hidden;
                           cursor: pointer;
-                          transition: background-color 0.3s;
                           width:100%;
-
-                          &:hover {
-                            background-color: #f5f5f5;
-                        }
                       }
 
                       &__wrapper {
@@ -171,7 +175,7 @@
               
                       &__details {
                           flex: 1;
-                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+                          min-width: 0; 
                           display: flex;
                           flex-direction: column;
                       }
@@ -183,7 +187,7 @@
                           overflow: hidden;
                           text-overflow: ellipsis;
                           flex: 1;
-                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+                          min-width: 0; 
 
                       }
               
@@ -194,7 +198,7 @@
                           overflow: hidden;
                           text-overflow: ellipsis;
                           flex: 1;
-                          min-width: 0; /* Important pour que text-overflow fonctionne dans un flexbox */
+                          min-width: 0; 
                       }
               
                       &__content-price {
@@ -362,8 +366,8 @@
   }
     
   // Variables pour contrôler l'animation
-  $base-delay: 150ms; // Délai entre chaque élément
-  $section-delay: 500ms; // Délai supplémentaire entre les sections
+  $base-delay: 200ms; // Délai entre chaque élément
+  $section-delay: 700ms; // Délai supplémentaire entre les sections
   
   // Boucle pour les sections
   @for $section from 1 through 3 {
@@ -380,3 +384,70 @@
     }
   }
   
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - Tablette -
++-----------------------------------------------------------+ */
+@media (min-width: 768px){
+
+    .menu__main{  
+        width:100%;
+        padding: 2rem 5% 2.4rem 5%;
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .menu__footer {
+        display: grid;
+        align-items: center;
+        padding-right: 2rem;
+        position: relative;
+        grid-template-columns: 1fr auto;
+        width: 100%;
+
+        &__img{
+            grid-column-start: 2;
+        }
+
+        &__list {
+            list-style: none;
+            gap: 0.5rem;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            padding: 0 clamp(1.5rem, 2%, 3rem);
+            margin-top: 1.25rem; 
+            width: clamp(10rem,100%,50rem);
+            grid-row: 1;
+            justify-self: self-end;
+            justify-content: flex-end;
+        }
+    }
+}
+
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1024px){
+
+    .menu__main{  
+        width:100%;
+        padding: 2rem clamp(2rem,10%,13.125rem) 2.4rem clamp(2rem,10%,13.125rem);
+    }
+
+    .menu__footer__list {
+        padding: 0 clamp(1.5rem, 45%, 3rem);
+    }
+}
+
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - large desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1440px){
+
+    .menu__main{  
+        width:100%;
+        padding: 2rem clamp(2rem,100%,13.125rem) 2.4rem clamp(2rem,100%,13.125rem);
+    }
+}

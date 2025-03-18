@@ -97,8 +97,29 @@
         border: none;
         border-radius: 2rem;
         margin-bottom: 3.625rem;
+        cursor: pointer;
+        position: relative;
 
+        &::after{
+            content:'';
+            position: absolute;
+            opacity: 0%;
+            background-color: v.$color-white;
+            width:100%;
+            top:0;
+            left:0;
+            height:100%;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 10px 10px rgb(0,0,0,0.25);
+            transition: opacity 0.2s ease-in-out ;
+        }
+    
+        &:hover::after{
+            opacity: 0.17;
+        }
+    
     }
+
 }
 
 // ### --- Section Fonctionnement ---
@@ -495,11 +516,16 @@
     }
 
     .footer {
-        display: flex;
-        flex-direction: row-reverse;
+        display: grid;
         align-items: center;
-        justify-content: flex-start;
         padding-right: 2rem;
+        position: relative;
+        grid-template-columns: 1fr auto;
+        width: 100%;
+
+        &__img{
+            grid-column-start: 2;
+        }
 
         &__menu {
             list-style: none;
@@ -507,21 +533,23 @@
             color: rgb(255, 255, 255);
             display: flex;
             flex-direction: row;
-            padding: 0 3rem;
-            margin-top: 1.25rem;
-            align-items: center;
-            justify-content: center;
-            width: 66%;
+            padding: 0 clamp(1.5rem, 45%, 3rem);
+            margin-top: 1.25rem; 
+            width: clamp(10rem,100%,50rem);
+            grid-row: 1;
+            justify-self: self-end;
+        }
 
             .footer__menu__item {
                 align-items: center;
                 flex: 1 1 auto;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: flex-start;
             }
-        }
+        
     }
 }
+
 
 @media (min-width: 1440px){
     .section__reservez h1{
@@ -548,9 +576,8 @@
 }
 
 
-  // ### --- Animation loader---
-
-  $loader-width: 100%;
+// ### --- Animation loader---
+$loader-width: 100%;
 $animation-loader-duration: 3s;
 $animation-letter-duration: 1s;
 
