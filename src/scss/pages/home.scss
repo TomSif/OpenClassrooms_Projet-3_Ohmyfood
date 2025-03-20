@@ -474,6 +474,9 @@
         }
     }
 }
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - Desktop -
++-----------------------------------------------------------+ */
 
 @media (min-width: 1024px){
     .section__fonctionnement {
@@ -550,7 +553,9 @@
     }
 }
 
-
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - Large Desktop -
++-----------------------------------------------------------+ */
 @media (min-width: 1440px){
     .section__reservez h1{
         font-size: 2.5rem;
@@ -575,80 +580,187 @@
 
 }
 
+/* +-----------------------------------------------------------+
+            - Homepage - Styling & Animation Loader -
++-----------------------------------------------------------+ */
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    animation: fade-out 3.2s ease-in-out forwards;
+    background-color: rgb(255, 255, 255);
+  }
 
-// ### --- Animation loader---
-$loader-width: 100%;
-$animation-loader-duration: 3s;
-$animation-letter-duration: 1s;
-
-.loader-container {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100vh;
-  width: $loader-width;
-  overflow: hidden;
-  z-index: 9999;
-  animation: fade-out $animation-loader-duration linear forwards;
-  background-color: white;
-
-  .letter {
-    font-size: 3rem;
-    font-family:  'Shrikhand';
-    font-weight: 400;
-    opacity: 0;
-    position: relative;
-    animation: letter-animation $animation-letter-duration infinite;
-    background-color: transparent;
-    height: auto;
-    color: transparent;
-    transform: translateX(-100%);
-    background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    width: fit-content;
-    overflow: visible;
-    background-color: transparent;
+  .loader__informations{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; 
+    display: flex;
+    flex-direction: column;
+    animation: fade-out 3.2s ease-in-out forwards;
 
 
-
-
-    @for $i from 1 through 8 {
-      &:nth-child(#{$i}) {
-        animation-delay: $i * calc($animation-letter-duration / 8);
-      }
+    & .header__img-container{
+        background-color: v.$color-white;
+        z-index: 99999999;
     }
   }
+
+  .slot-machine {
+	display: flex;
+	position: fixed;
+	top: 15rem;
+    border-radius: 1rem;
+    background-color: transparent;
+
+
 }
-@keyframes letter-animation {
-    0% {
-      opacity: 0;
-      background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
-    }
-    20%, 80% {
-      opacity: 1;
-      transform: translateY(0);
-      background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
+
+.band {
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    margin: 0 5px;
+    position: relative;
+    border: 3px solid v.$color-grey;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(147,86,220,0.3));
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+
+
+    &:nth-of-type(2){
+        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(252,163,17,0.3));
 
     }
-    100% {
+
+    &:nth-of-type(3){
+        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(153,226,208,0.3));
+    }
+}
+
+.symbols {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    animation: spin 3s linear infinite;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+}
+
+.loader__logo{
+    font-size: 2rem;
+}
+
+.band:nth-child(2) .symbols {
+    animation-delay: 0.3s;
+}
+
+.band:nth-child(3) .symbols {
+    animation-delay: 0.6s;
+    
+}
+
+.text-container {
+	position: absolute;
+	width: 100%;
+	height: 16rem;
+	z-index: 111111;
+    background-color: #F3F3F3;
+}
+
+
+.loading-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
     opacity: 0;
-    background-image: linear-gradient(45deg, rgba(238, 255, 6, 0.8) 100%, rgb(0, 90, 38) 150%);
-    transform: translateX(100%);
+    position: fixed;
+    top:5rem;
+    animation: slideDown 3s infinite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: v.$color-grey-tint-4;
+  }
+
+.loading-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-text:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.loading-text:nth-child(3) {
+    animation-delay: 2s;
+}
+
+// ### --- Animation Loader ---
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10%, 30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(-1280px);
+    }
+    30% {
+        transform: translateY(-800px);
+    }
+    80% {
+        transform: translateY(-640px);
+    }
+    90% {
+        transform: translateY(-640px);
+    }
+    100% {
+        transform: translateY(-640px);
     }
 }
 
 @keyframes fade-out {
-    0%, 90% {
-      opacity: 1;
+    0%{
+        opacity: 1;
     }
-    100% {
-      opacity: 0;
-      visibility: hidden;
+    97%{
+        opacity: 0.90;
     }
-  }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
