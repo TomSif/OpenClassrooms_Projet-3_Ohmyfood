@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 // ### --- Header ---
     &__header{ 
         width:100%;
@@ -61,7 +62,7 @@
 
 // ### --- Main ---
     .menu__main  section, .menu__main__title-container{
-    max-width: 630px;
+    max-width: 39.375rem;
     }
 
     &__main{  
@@ -155,6 +156,7 @@
                           overflow: hidden;
                           cursor: pointer;
                           width:100%;
+                          outline:none;
                       }
 
                       &__wrapper {
@@ -239,14 +241,17 @@
                       }
               
                       /* Effet au survol sur desktop */
-                      &__label:hover .menu__main__sections__list__items__chek-container {
+                      &__label:hover .menu__main__sections__list__items__chek-container, &__label:focus .menu__main__sections__list__items__chek-container{
                           width: 60px;
                           border-radius: 0 1rem 1rem 0;
+                          outline: none;
                       }
                       
-                      &__label:hover .menu__main__sections__list__items__content {
+                      &__label:hover .menu__main__sections__list__items__content, &__label:focus .menu__main__sections__list__items__content {
                           width: calc(100% - 60px);
                           border-radius: 0 1rem 1rem 0;
+                          outline: none;
+
                       }
               
                       /* Effet quand la checkbox est cochée */
@@ -294,63 +299,7 @@
     &__button:hover::after{
         opacity: 15%;
     }
-
-
 }
-
-// ### --- Footer ---
-    &__footer{
-        background-color: v.$color-grey;
-        width: 100%;
-        color:v.$color-white;
-        position: relative;
-        z-index: 100;
-        padding: 1.5rem;
-        padding-bottom: 0.375rem;
-
-        &__img{
-            width: 6.25rem;
-            filter: invert(100%);
-            }
-
-        &__list{
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            color: rgb(255, 255, 255);
-            display: flex;
-            padding: 0;
-            margin-top: 1.25rem;
-            align-items: flex-start;
-            justify-content: center;
-
-            &__item{
-                line-height: 1;
-                padding: 0;
-
-
-                & h4{
-                    line-height: 1.2;
-                    padding: 0;
-                    margin: 0;
-                }
-            }
-
-            &__item-grid a{
-                display: grid;
-                grid-template-columns: 1.25rem auto;
-                align-items: center;
-                column-gap: 0.5rem;
-
-                & h4{
-                    line-height: 1.2;
-                    padding: 0;
-                    margin: 0;
-                }
-            }
-        }
-    }
 }
 
 // ### --- Animation liste---
@@ -365,7 +314,7 @@
     }
   }
     
-  // Variables pour contrôler l'animation
+
   $base-delay: 200ms; // Délai entre chaque élément
   $section-delay: 700ms; // Délai supplémentaire entre les sections
   
@@ -376,7 +325,7 @@
       $section-base-delay: ($section - 1) * $section-delay;
       
       // Boucle pour les éléments dans chaque section
-      @for $item from 1 through 20 { // Support jusqu'à 20 éléments par section
+      @for $item from 1 through 20 { 
         .menu__main__sections__list__items:nth-child(#{$item}) {
           animation-delay: #{$section-base-delay + ($item * $base-delay)};
         }
@@ -396,34 +345,6 @@
         flex-direction: column;
         align-items: center;
     }
-
-
-    .menu__footer {
-        display: grid;
-        align-items: center;
-        padding-right: 2rem;
-        position: relative;
-        grid-template-columns: 1fr auto;
-        width: 100%;
-
-        &__img{
-            grid-column-start: 2;
-        }
-
-        &__list {
-            list-style: none;
-            gap: 0.5rem;
-            color: rgb(255, 255, 255);
-            display: flex;
-            flex-direction: row;
-            padding: 0 clamp(1.5rem, 2%, 3rem);
-            margin-top: 1.25rem; 
-            width: clamp(10rem,100%,50rem);
-            grid-row: 1;
-            justify-self: self-end;
-            justify-content: flex-end;
-        }
-    }
 }
 
 /* +-----------------------------------------------------------+
@@ -435,16 +356,25 @@
         width:100%;
         padding: 2rem clamp(2rem,10%,13.125rem) 2.4rem clamp(2rem,10%,13.125rem);
     }
-
-    .menu__footer__list {
-        padding: 0 clamp(1.5rem, 45%, 3rem);
-    }
 }
 
 /* +-----------------------------------------------------------+
             - Homepage - Media-queries - large desktop -
 +-----------------------------------------------------------+ */
 @media (min-width: 1440px){
+    .menu__header__logo-and-button {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .menu__header__logo {
+        width: 12.5rem;
+        height: 2.125rem;
+    }
+
+    .menu__header__img{
+        height:24rem;
+    }
 
     .menu__main{  
         width:100%;

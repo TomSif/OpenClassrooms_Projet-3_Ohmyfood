@@ -163,6 +163,14 @@
 /* +-----------------------------------------------------------+
                         Homepage.scss FILE
 +-----------------------------------------------------------+ */
+html {
+  scroll-behavior: smooth;
+}
+
+a:focus {
+  outline: none !important;
+}
+
 .header {
   width: 100%;
 }
@@ -247,6 +255,7 @@
   margin-bottom: 3.625rem;
   cursor: pointer;
   position: relative;
+  outline: none;
 }
 .section__reservez__button::after {
   content: "";
@@ -261,8 +270,9 @@
   box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.25);
   transition: opacity 0.2s ease-in-out;
 }
-.section__reservez__button:hover::after {
+.section__reservez__button:hover::after, .section__reservez__button:focus::after {
   opacity: 0.17;
+  outline: none;
 }
 
 .section__fonctionnement {
@@ -410,6 +420,26 @@
 }
 .section__restaurants__list__item__informations p {
   margin-bottom: 0.75rem;
+}
+.section__restaurants .cards {
+  border-radius: 1rem;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.section__restaurants .cards:hover, .section__restaurants .cards:active, .section__restaurants .cards:focus {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 2px solid rgb(245, 237, 255);
+  animation: bounce 0.3s ease-in-out forwards;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.016); /* Grandit un peu plus */
+  }
+  100% {
+    transform: scale(1.01); /* Taille finale */
+  }
 }
 
 .heart-checkbox {
@@ -638,6 +668,14 @@
             - Homepage - Media-queries - Large Desktop -
 +-----------------------------------------------------------+ */
 @media (min-width: 1440px) {
+  .header__img-container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .header__img {
+    width: 12.5rem;
+    height: 2.125rem;
+  }
   .section__reservez h1 {
     font-size: 2.5rem;
   }
@@ -692,7 +730,7 @@
 .slot-machine {
   display: flex;
   position: fixed;
-  top: 15rem;
+  top: 14rem;
   border-radius: 1rem;
   background-color: transparent;
 }
@@ -708,14 +746,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(147, 86, 220, 0.3));
+  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(147, 86, 220, 0.5));
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
 }
 .band:nth-of-type(2) {
-  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(252, 163, 17, 0.3));
+  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(255, 121, 218, 0.5));
 }
 .band:nth-of-type(3) {
-  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(153, 226, 208, 0.3));
+  background: linear-gradient(135deg, rgba(255, 255, 230, 0.5), rgba(153, 226, 208, 0.5));
 }
 
 .symbols {
@@ -818,7 +856,7 @@
     opacity: 1;
   }
   97% {
-    opacity: 0.9;
+    opacity: 0.98;
   }
   100% {
     opacity: 0;
@@ -881,7 +919,7 @@
   overflow-clip-margin: content-box;
 }
 .menu .menu__main section, .menu .menu__main__title-container {
-  max-width: 630px;
+  max-width: 39.375rem;
 }
 .menu__main {
   width: 100%;
@@ -971,6 +1009,7 @@
   overflow: hidden;
   cursor: pointer;
   width: 100%;
+  outline: none;
 }
 .menu__main__sections__list__items__wrapper {
   display: flex;
@@ -1043,13 +1082,15 @@
   cursor: pointer;
   display: none;
 }
-.menu__main__sections__list__items__label:hover .menu__main__sections__list__items__chek-container {
+.menu__main__sections__list__items__label:hover .menu__main__sections__list__items__chek-container, .menu__main__sections__list__items__label:focus .menu__main__sections__list__items__chek-container {
   width: 60px;
   border-radius: 0 1rem 1rem 0;
+  outline: none;
 }
-.menu__main__sections__list__items__label:hover .menu__main__sections__list__items__content {
+.menu__main__sections__list__items__label:hover .menu__main__sections__list__items__content, .menu__main__sections__list__items__label:focus .menu__main__sections__list__items__content {
   width: calc(100% - 60px);
   border-radius: 0 1rem 1rem 0;
+  outline: none;
 }
 .menu__main__sections__list__items .menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__chek-container {
   width: 60px;
@@ -1087,51 +1128,6 @@
 }
 .menu__main__button:hover::after {
   opacity: 15%;
-}
-.menu__footer {
-  background-color: rgb(53, 53, 53);
-  width: 100%;
-  color: rgb(255, 255, 255);
-  position: relative;
-  z-index: 100;
-  padding: 1.5rem;
-  padding-bottom: 0.375rem;
-}
-.menu__footer__img {
-  width: 6.25rem;
-  filter: invert(100%);
-}
-.menu__footer__list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: rgb(255, 255, 255);
-  display: flex;
-  padding: 0;
-  margin-top: 1.25rem;
-  align-items: flex-start;
-  justify-content: center;
-}
-.menu__footer__list__item {
-  line-height: 1;
-  padding: 0;
-}
-.menu__footer__list__item h4 {
-  line-height: 1.2;
-  padding: 0;
-  margin: 0;
-}
-.menu__footer__list__item-grid a {
-  display: grid;
-  grid-template-columns: 1.25rem auto;
-  align-items: center;
-  column-gap: 0.5rem;
-}
-.menu__footer__list__item-grid a h4 {
-  line-height: 1.2;
-  padding: 0;
-  margin: 0;
 }
 
 @keyframes slideFromLeft {
@@ -1338,6 +1334,89 @@
     flex-direction: column;
     align-items: center;
   }
+}
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1024px) {
+  .menu__main {
+    width: 100%;
+    padding: 2rem clamp(2rem, 10%, 13.125rem) 2.4rem clamp(2rem, 10%, 13.125rem);
+  }
+}
+/* +-----------------------------------------------------------+
+            - Homepage - Media-queries - large desktop -
++-----------------------------------------------------------+ */
+@media (min-width: 1440px) {
+  .menu__header__logo-and-button {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .menu__header__logo {
+    width: 12.5rem;
+    height: 2.125rem;
+  }
+  .menu__header__img {
+    height: 24rem;
+  }
+  .menu__main {
+    width: 100%;
+    padding: 2rem clamp(2rem, 100%, 13.125rem) 2.4rem clamp(2rem, 100%, 13.125rem);
+  }
+}
+/* +-----------------------------------------------------------+
+                        Main.scss FILE
++-----------------------------------------------------------+ */
+/* +-----------------------------------------------------------+
+                       Footer.scss FILE
++-----------------------------------------------------------+ */
+.menu__footer {
+  background-color: rgb(53, 53, 53);
+  width: 100%;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 100;
+  padding: 1.5rem;
+  padding-bottom: 0.375rem;
+}
+.menu__footer__img {
+  width: 6.25rem;
+  filter: invert(100%);
+}
+.menu__footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  padding: 0;
+  margin-top: 1.25rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.menu__footer__list__item {
+  line-height: 1;
+  padding: 0;
+}
+.menu__footer__list__item h4 {
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+.menu__footer__list__item-grid a {
+  display: grid;
+  grid-template-columns: 1.25rem auto;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.menu__footer__list__item-grid a h4 {
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
   .menu__footer {
     display: grid;
     align-items: center;
@@ -1367,21 +1446,8 @@
             - Homepage - Media-queries - desktop -
 +-----------------------------------------------------------+ */
 @media (min-width: 1024px) {
-  .menu__main {
-    width: 100%;
-    padding: 2rem clamp(2rem, 10%, 13.125rem) 2.4rem clamp(2rem, 10%, 13.125rem);
-  }
   .menu__footer__list {
     padding: 0 clamp(1.5rem, 45%, 3rem);
-  }
-}
-/* +-----------------------------------------------------------+
-            - Homepage - Media-queries - large desktop -
-+-----------------------------------------------------------+ */
-@media (min-width: 1440px) {
-  .menu__main {
-    width: 100%;
-    padding: 2rem clamp(2rem, 100%, 13.125rem) 2.4rem clamp(2rem, 100%, 13.125rem);
   }
 }
 *,

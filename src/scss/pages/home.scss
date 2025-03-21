@@ -3,6 +3,14 @@
 +-----------------------------------------------------------+ */
 @use "../abstracts/variables" as v;
 
+html {
+    scroll-behavior: smooth;
+}
+
+a:focus {
+    outline: none !important;
+}
+
 // ### --- Header ---
 .header{
     width:100%;
@@ -99,6 +107,7 @@
         margin-bottom: 3.625rem;
         cursor: pointer;
         position: relative;
+        outline: none;
 
         &::after{
             content:'';
@@ -114,8 +123,9 @@
             transition: opacity 0.2s ease-in-out ;
         }
     
-        &:hover::after{
+        &:hover::after, &:focus::after{
             opacity: 0.17;
+            outline: none;
         }
     
     }
@@ -259,12 +269,10 @@
 
         article{
             width:100%;
-
         }
 
         a {
             display: block;
-
         }
 
         &__informations{
@@ -291,10 +299,30 @@
             p {
                 margin-bottom: 0.75rem;
             }
+        }
     }
 
+    .cards{
+        border-radius: 1rem;
+        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
 
+    .cards:hover, .cards:active, .cards:focus{
+        box-shadow: v.$shadow-btn;
+        outline: 2px solid v.$color-primary-2;
+        animation: bounce 0.3s ease-in-out forwards;
+    }
 
+    @keyframes bounce {
+        0% {
+            transform: scale(1);    
+        }
+        90% {
+            transform: scale(1.016); /* Grandit un peu plus */
+        }
+        100% {
+            transform: scale(1.01); /* Taille finale */
+        }
     }
 }
 
@@ -477,7 +505,6 @@
 /* +-----------------------------------------------------------+
             - Homepage - Media-queries - Desktop -
 +-----------------------------------------------------------+ */
-
 @media (min-width: 1024px){
     .section__fonctionnement {
         display: flex;
@@ -557,6 +584,15 @@
             - Homepage - Media-queries - Large Desktop -
 +-----------------------------------------------------------+ */
 @media (min-width: 1440px){
+    .header__img-container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    }
+
+    .header__img {
+        width: 12.5rem;
+        height: 2.125rem;
+    }
     .section__reservez h1{
         font-size: 2.5rem;
     }
@@ -598,7 +634,7 @@
     background-color: rgb(255, 255, 255);
   }
 
-  .loader__informations{
+.loader__informations{
     position: fixed;
     top: 0;
     width: 100vw;
@@ -610,20 +646,18 @@
     flex-direction: column;
     animation: fade-out 3.2s ease-in-out forwards;
 
-
     & .header__img-container{
         background-color: v.$color-white;
         z-index: 99999999;
     }
   }
 
-  .slot-machine {
+.slot-machine {
 	display: flex;
 	position: fixed;
-	top: 15rem;
+	top: 14rem;
     border-radius: 1rem;
     background-color: transparent;
-
 
 }
 
@@ -638,17 +672,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(147,86,220,0.3));
+    background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(147,86,220,0.5));
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
 
-
     &:nth-of-type(2){
-        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(252,163,17,0.3));
-
+        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(255, 121, 218,0.5));
     }
 
     &:nth-of-type(3){
-        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(153,226,208,0.3));
+        background: linear-gradient(135deg, rgba(255, 255, 230, 0.5),rgba(153,226,208,0.5));
     }
 }
 
@@ -674,7 +706,6 @@
 
 .band:nth-child(3) .symbols {
     animation-delay: 0.6s;
-    
 }
 
 .text-container {
@@ -757,7 +788,7 @@
         opacity: 1;
     }
     97%{
-        opacity: 0.90;
+        opacity: 0.98;
     }
     100%{
         opacity: 0;
