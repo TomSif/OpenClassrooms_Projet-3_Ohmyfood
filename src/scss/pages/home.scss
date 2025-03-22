@@ -193,7 +193,6 @@ a:focus {
             display: flex;
             align-items: center;  
             justify-content: center; 
-            line-height: 25px; 
             font-family: Roboto;
             font-size: 0.875rem;
             line-height: 25px; 
@@ -318,10 +317,10 @@ a:focus {
             transform: scale(1);    
         }
         90% {
-            transform: scale(1.016); /* Grandit un peu plus */
+            transform: scale(1.016); 
         }
         100% {
-            transform: scale(1.01); /* Taille finale */
+            transform: scale(1.01); 
         }
     }
 }
