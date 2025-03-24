@@ -1,0 +1,26 @@
+# Fichiers Node.js
+node_modules/
+
+# Dossier de build
+dist/
+build/
+
+# Fichiers de configuration IDE
+.idea/
+.vscode/
+
+# Fichiers log
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.bak
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Source maps générés par Webpack, Sass, etc.
+*.map
