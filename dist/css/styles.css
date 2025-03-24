@@ -123,7 +123,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("/assets/fonts/roboto-v47-latin-300.woff2") format("woff2");
+  src: url("../../assets/fonts/roboto-v47-latin-300.woff2") format("woff2");
 }
 /* roboto-regular - latin */
 @font-face {
@@ -131,7 +131,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/roboto-v47-latin-regular.woff2") format("woff2");
+  src: url("../../assets/fonts/roboto-v47-latin-regular.woff2") format("woff2");
 }
 /* roboto-500 - latin */
 @font-face {
@@ -139,7 +139,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("/assets/fonts/roboto-v47-latin-500.woff2") format("woff2");
+  src: url("../../assets/fonts/roboto-v47-latin-500.woff2") format("woff2");
 }
 /* roboto-700 - latin */
 @font-face {
@@ -147,7 +147,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/roboto-v47-latin-700.woff2") format("woff2");
+  src: url("../../assets/fonts/roboto-v47-latin-700.woff2") format("woff2");
 }
 /* shrikhand-regular - latin */
 @font-face {
@@ -155,7 +155,7 @@
   font-family: "Shrikhand";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/shrikhand-v15-latin-regular.woff2") format("woff2");
+  src: url("../../assets/fonts/shrikhand-v15-latin-regular.woff2") format("woff2");
 }
 /* +-----------------------------------------------------------+
                         Main.scss FILE
@@ -450,8 +450,8 @@ a:focus {
   display: inline-block;
   font-size: 1.5rem;
   cursor: pointer;
-  -webkit-mask-image: url("/assets/icons/heart-solid.svg");
-  mask-image: url("/assets/icons/heart-solid.svg");
+  -webkit-mask-image: url("../../assets/icons/heart-solid.svg");
+  mask-image: url("../../assets/icons/heart-solid.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
