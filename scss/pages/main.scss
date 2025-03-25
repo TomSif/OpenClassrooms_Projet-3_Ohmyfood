@@ -6,6 +6,7 @@
 @use "../abstracts/variables" as v;
 @use "../base/typography" as t;
 @use "../base/fonts" as f;
+@use '../pages/animations.scss';
 @use '../pages/home.scss';
 @use "../pages/menu2.scss";
 @use "../components/footer";
