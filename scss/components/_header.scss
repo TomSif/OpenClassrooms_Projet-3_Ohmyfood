@@ -1,0 +1,61 @@
+/* +-----------------------------------------------------------+
+                       _header.scss FILE
++-----------------------------------------------------------+ */
+
+// ### --- Header ---
+.menu__header{ 
+    width:100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+
+    @media (min-width: 1440px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+        &__logo-and-button{
+        display: flex;
+        align-items: center ;
+        width:100%;
+        padding-top: 0.875rem;
+        padding-bottom: 0.250rem ;
+        justify-content: center;
+        }
+        
+    
+        &__button{
+            background-color: transparent;
+            border: none;
+            margin-left: 0;
+            transform: translateX(1.5rem);
+            cursor: pointer;
+            width: 1.125rem;
+            height: 1rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__logo{
+            width: 10rem;
+            height: 2.75rem;
+            margin: 0 auto;
+
+            @media (min-width: 1440px){
+                width: 12.5rem;
+                height: 2.125rem;
+            }
+        }
+
+        &__img{
+            width:100%;
+            height: 17.125rem;
+            object-fit: cover;
+            flex-shrink: 1;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }

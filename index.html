@@ -25,10 +25,10 @@
 <body>
 <!-- Loader Section Start-->
   <section class="loader__container" aria-hidden="true">
-    <div class="loader__informations">
-      <div class="header__img-container effect-style-shadow-badge">
-          <img src="./assets/icons/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood" class="header__img">
-      </div>
+    <div class="loader__informations effect-style-shadow-badge">  
+        <div class="header__img-container ">
+            <img src="../assets/icons/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood" class="menu__header__logo">
+        </div>
       <div class="text-container effect-style-shadow-badge">
         <h1 class="loading-text text-style-button ">Bientôt la meilleure table !</h1>
         <h2 class="loading-text text-style-button ">On peaufine les recommandations !</h2>
@@ -140,20 +140,20 @@
 </section>
 <!-- Loader Section End-->
 <!-- Header -->
-  <header class="header">
-      <div class="header__img-container effect-style-shadow-badge">
-          <img src="./assets/icons/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood" class="header__img">
-      </div>
-    <form action="about:blank" class="header__form effect-style-shadow-badge">
-      <label for="search" class="visualy-hidden">Rechercher</label>
-      <div class="header__form__input-wrapper">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i><!-- Icône de location -->
-        <input type="text" name="search" id="search" placeholder="Paris,Belleville" class="text-style-button header__form__input" aria-disabled="true" disabled>
-      </div>
-    </form>
-  </header>
+<header class="menu__header effect-style-shadow-badge">   
+  <div class="menu__header__logo-and-button">
+      <img src="../assets/icons/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood" class="menu__header__logo">
+  </div>
+</header>
 <!-- Main -->
   <main class="main">
+    <form action="about:blank" class="main__form effect-style-shadow-badge">
+      <label for="search" class="visualy-hidden">Rechercher</label>
+      <div class="main__form__input-wrapper">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i><!-- Icône de location -->
+        <input type="text" name="search" id="search" placeholder="Paris,Belleville" class="text-style-button main__form__input" aria-disabled="true" >
+      </div>
+    </form>
   <!-- Section Réservez -->
     <section class="section__reservez">
       <h1 class="text-style-section-title section__reservez__title">Réservez le menu qui vous convient</h1>
@@ -185,98 +185,89 @@
       <ul class="section__restaurants__list">
       <!-- Restaurant: La palette du goût -->
       <li class="section__restaurants__list__item">
-        <article class="cards" tabindex="0" aria-label="Restaurant La palette du goût à Ménilmontant">
-          <div class="section__restaurants__list__img-container">
-            <a href="./restaurants/menuLaPalette2.html"  aria-label="Voir le menu du restaurant La palette du goût à Ménilmontant">
+        <article class="cards">
+          <a href="./restaurants/menuLaPalette2.html" class="section__restaurants__list__item__link" aria-label="Voir le menu du restaurant La palette du goût à Ménilmontant">
+            <div class="section__restaurants__list__img-container">
               <img src="./assets/images/resto-la-palette.webp" alt="image du restaurant la palette du goût à Ménilmontant" class="section__restaurants__list__img">
-            </a>
-          </div>
-          <div class="section__restaurants__list__item__informations">
-            <div class="section__restaurants__list__item__informations__text">
-              <a href="./restaurants/menuLaPalette2.html"  aria-label="Voir le menu du restaurant La palette du goût à Ménilmontant" tabindex="-1">
+            </div>
+            <div class="section__restaurants__list__item__informations">
+              <div class="section__restaurants__list__item__informations__text">
                 <h3 class="text-style-menu-plate-title">La palette du goût</h3>
                 <p class="text-style-paragraph">Ménilmontant</p>
-              </a>
+              </div>
             </div>
-            <!-- Heart button -->
-            <div class="heart-container">
-              <input type="checkbox" id="heart" class="heart-checkbox"  aria-label="Ajouter La palette du goût à vos favoris">
-              <label for="heart" class="heart-container">
-                <i class="fa-regular fa-heart"></i>
-              </label>
-            </div>
+          </a>
+          <div class="heart">
+            <input type="checkbox" id="heart1" class="heart-checkbox" aria-label="Ajouter La palette du goût à vos favoris">
+            <label for="heart1" class="heart-container" tabindex="-1">
+              <i class="fa-regular fa-heart"></i>
+            </label>                
           </div>
         </article>
-      </li>
+      </li>      
       <!-- Restaurant: La note enchantée -->
       <li class="section__restaurants__list__item">
-        <article class="cards" tabindex="0" aria-label="Restaurant La note enchantée à Charonne">
-          <div class="section__restaurants__list__img-container">
-            <a href="./restaurants/menuLaNote2.html" aria-label="Voir le menu du restaurant La note enchantée à Charonne">
+        <article class="cards">
+          <a href="./restaurants/menuLaNote2.html" class="section__restaurants__list__item__link" aria-label="Voir le menu du restaurant La note enchantée à Charonne">
+            <div class="section__restaurants__list__img-container">
               <img src="./assets/images/resto-la-note.webp" alt="image du restaurant La note enchantée à Charonne" class="section__restaurants__list__img">
-            </a>
-          </div>
-          <div class="section__restaurants__list__item__informations">
-            <div class="section__restaurants__list__item__informations__text">
-              <a href="./restaurants/menuLaNote2.html" aria-label="Consulter la carte du restaurant La note enchantée" tabindex="-1">
+            </div>
+            <div class="section__restaurants__list__item__informations">
+              <div class="section__restaurants__list__item__informations__text">
                 <h3 class="text-style-menu-plate-title">La note enchantée</h3>
                 <p class="text-style-paragraph">Charonne</p>
-              </a>
+              </div>
             </div>
-            <div class="heart-container">
-              <input type="checkbox" id="heart2" class="heart-checkbox" aria-label="Ajouter La note enchantée à vos favoris">
-              <label for="heart2" class="heart-container">
-                <i class="fa-regular fa-heart"></i>
-              </label>                
-            </div>
+          </a>
+          <div class="heart">
+            <input type="checkbox" id="heart2" class="heart-checkbox" aria-label="Ajouter La note enchantée à vos favoris">
+            <label for="heart2" class="heart-container" tabindex="-1">
+              <i class="fa-regular fa-heart"></i>
+            </label>                
           </div>
         </article>
-      </li>
+      </li>      
       <!-- Restaurant: À la française -->
       <li class="section__restaurants__list__item">
-        <article class="cards" tabindex="0" aria-label="Restaurant À la française à Cité Rouge">
-          <div class="section__restaurants__list__img-container">
-            <a href="./restaurants/menuLafrancaise2.html" aria-label="Voir le menu du restaurant À la française à Cité Rouge">
+        <article class="cards">
+          <a href="./restaurants/menuLafrancaise2.html" class="section__restaurants__list__item__link" aria-label="Voir le menu du restaurant À la française à Cité Rouge">
+            <div class="section__restaurants__list__img-container">
               <img src="./assets/images/resto-a-la-francaise.webp" alt="image du restaurant À la française à Cité Rouge" class="section__restaurants__list__img">
-            </a>
-          </div>
-          <div class="section__restaurants__list__item__informations">
-            <div class="section__restaurants__list__item__informations__text">
-              <a href="./restaurants/menuLafrancaise2.html" aria-label="Consulter la carte du restaurant À la française" tabindex="-1">
+            </div>
+            <div class="section__restaurants__list__item__informations">
+              <div class="section__restaurants__list__item__informations__text">
                 <h3 class="text-style-menu-plate-title">À la française</h3>
                 <p class="text-style-paragraph">Cité Rouge</p>
-              </a>
+              </div>
             </div>
-            <div class="heart-container">
-              <input type="checkbox" id="heart3" class="heart-checkbox" aria-label="Ajouter À la française à vos favoris">
-              <label for="heart3" class="heart-container">
-                <i class="fa-regular fa-heart"></i>
-              </label>                
-            </div>
+          </a>
+          <div class="heart">
+            <input type="checkbox" id="heart3" class="heart-checkbox" aria-label="Ajouter À la française à vos favoris">
+            <label for="heart3" class="heart-container" tabindex="-1">
+              <i class="fa-regular fa-heart"></i>
+            </label>                
           </div>
         </article>
       </li>
       <!-- Restaurant: Le délice des sens -->
       <li class="section__restaurants__list__item">
-        <article class="cards" tabindex="0" aria-label="Restaurant Le délice des sens à Folie-Méricourt">
-          <div class="section__restaurants__list__img-container">
-            <a href="./restaurants/menuLeDelice2.html" aria-label="Voir le menu du restaurant Le délice des sens à Folie-Méricourt">
-              <img src="./assets/images/resto-le-delice.webp" alt="image du restaurant le délice des sens" class="section__restaurants__list__img">
-            </a>
-          </div>
-          <div class="section__restaurants__list__item__informations">
-            <div class="section__restaurants__list__item__informations__text">
-              <a href="./restaurants/menuLeDelice2.html" aria-label="Consulter la carte du restaurant Le délice des sens" tabindex="-1">
+        <article class="cards">
+          <a href="./restaurants/menuLeDelice2.html" class="section__restaurants__list__item__link" aria-label="Voir le menu du restaurant Le délice des sens à Folie-Méricourt">
+            <div class="section__restaurants__list__img-container">
+              <img src="./assets/images/resto-le-delice.webp" alt="image du restaurant Le délice des sens à Folie-Méricourt" class="section__restaurants__list__img">
+            </div>
+            <div class="section__restaurants__list__item__informations">
+              <div class="section__restaurants__list__item__informations__text">
                 <h3 class="text-style-menu-plate-title">Le délice des sens</h3>
                 <p class="text-style-paragraph">Folie-Méricourt</p>
-              </a>
+              </div>
             </div>
-            <div class="heart-container">
-              <input type="checkbox" id="heart4" class="heart-checkbox" aria-label="Ajouter Le délice des sens à vos favoris">
-              <label for="heart4" class="heart-container">
-                <i class="fa-regular fa-heart"></i>
-              </label>                
-            </div>
+          </a>
+          <div class="heart">
+            <input type="checkbox" id="heart4" class="heart-checkbox" aria-label="Ajouter Le délice des sens à vos favoris">
+            <label for="heart4" class="heart-container" tabindex="-1">
+              <i class="fa-regular fa-heart"></i>
+            </label>                
           </div>
         </article>
       </li>

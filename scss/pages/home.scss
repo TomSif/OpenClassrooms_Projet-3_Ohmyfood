@@ -15,21 +15,11 @@ a:focus {
 // ### --- Header ---
 .header{
     width:100%;
+}
 
-    &__img-container{
-        display: inline-flex;
-        justify-content: center ;
-        width:100%;
-        padding-top: 0.875rem;
-        padding-bottom: 0.250rem ;
-        position: relative;
-        z-index: 2;
-    }
-    
-    &__img{
-        width: 10rem;
-        height: 2.75rem;
-    }
+// ### --- Main ---
+.main {
+    width:100%;
 
     &__form{
         width:100%;
@@ -42,7 +32,6 @@ a:focus {
 
         &__input-wrapper{
             display: inline-flex;
-            width:100%;
             justify-content: center;
             align-items: center;
         }
@@ -53,6 +42,7 @@ a:focus {
             border: none;
             text-align: center;
             width: auto;
+            margin: auto;
 
             &::placeholder{
                 opacity: 100%;
@@ -66,11 +56,6 @@ a:focus {
         color: v.$color-grey;
         font-size: 1rem;
     }
-}
-
-// ### --- Main ---
-.main {
-    width:100%;
 }
 
 // ### --- Section Réservez ---
@@ -248,7 +233,7 @@ a:focus {
                 padding: 7px 9px 5px 9px;
                 top: 0.875rem;
                 right: 0.75rem;
-                z-index: 99;
+                z-index: 2;
                 border-radius: 0.125rem;
 
             }
@@ -266,13 +251,24 @@ a:focus {
 
     &__list__item{
         width: 100%;
+        position: relative;
+
 
         article{
             width:100%;
         }
 
-        a {
+        &__link {
             display: block;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            &:focus,
+            &:hover,
+            &:active{
+                box-shadow: v.$shadow-btn;
+                outline: 2px solid v.$color-primary-2;
+                border-radius: 1rem;
+            }
         }
 
         &__informations{
@@ -301,32 +297,17 @@ a:focus {
             }
         }
     }
-
-    .cards{
-        border-radius: 1rem;
-        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .cards:hover, .cards:active, .cards:focus{
-        box-shadow: v.$shadow-btn;
-        outline: 2px solid v.$color-primary-2;
-        animation: bounce 0.3s ease-in-out forwards;
-    }
-
-    @keyframes bounce {
-        0% {
-            transform: scale(1);    
-        }
-        90% {
-            transform: scale(1.016); 
-        }
-        100% {
-            transform: scale(1.01); 
-        }
-    }
 }
 
 // ### --- Conteneur du coeur ---
+.heart{
+    position: absolute;
+    right: 20px;
+    top: 83%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
 .heart-checkbox {
     display: none;
 }
@@ -571,15 +552,7 @@ a:focus {
             - Homepage - Media-queries - Large Desktop -
 +-----------------------------------------------------------+ */
 @media (min-width: 1440px){
-    .header__img-container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    }
 
-    .header__img {
-        width: 12.5rem;
-        height: 2.125rem;
-    }
     .section__reservez h1{
         font-size: 2.5rem;
     }
