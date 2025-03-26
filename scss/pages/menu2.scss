@@ -59,10 +59,6 @@
         }
 
 // ### --- Main ---
-    .menu__main  section, .menu__main__title-container{
-    max-width: 39.375rem;
-    }
-
     &__main{  
         width:100%;
         padding: 2rem 0.875rem 2.4rem 0.875rem;
@@ -78,6 +74,10 @@
         gap: 2.4rem;
         max-width: 66rem;
         align-items: center;
+
+        & section , &__title-container{
+            max-width: 39.375rem;
+        }
 
         &__title-container{
             display: flex;
@@ -238,14 +238,14 @@
                           display: none;
                       }
               
-                      /* Effet au survol sur desktop */
-                      &__label:hover .menu__main__sections__list__items__chek-container, &__label:focus .menu__main__sections__list__items__chek-container{
+                      /* Effet au survol  */
+                      &__label:hover &__chek-container, &__label:focus &__chek-container{
                           width: 60px;
                           border-radius: 0 1rem 1rem 0;
                           outline: none;
                       }
                       
-                      &__label:hover .menu__main__sections__list__items__content, &__label:focus .menu__main__sections__list__items__content {
+                      &__label:hover &__content, &__label:focus &__content {
                           width: calc(100% - 60px);
                           border-radius: 0 1rem 1rem 0;
                           outline: none;
@@ -253,12 +253,12 @@
                       }
               
                       /* Effet quand la checkbox est cochée */
-                      .menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__chek-container {
+                      .menu__items-checkbox:checked ~ &__wrapper &__chek-container {
                           width: 60px;
                           border-radius: 0 1rem 1rem 0;
                       }
                       
-                      .menu__items-checkbox:checked  ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__content {
+                      .menu__items-checkbox:checked  ~ &__wrapper &__content {
                           width: calc(100% - 60px);
                           border-radius: 0 1rem 1rem 0;
                       }
@@ -300,37 +300,6 @@
 }
 }
 
-// ### --- Animation liste---
-@keyframes slideFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-    
-
-  $base-delay: 200ms; // Délai entre chaque élément
-  $section-delay: 700ms; // Délai supplémentaire entre les sections
-  
-  // Boucle pour les sections
-  @for $section from 1 through 3 {
-    .menu__main__sections:nth-of-type(#{$section}) {
-      // Délai de base pour cette section
-      $section-base-delay: ($section - 1) * $section-delay;
-      
-      // Boucle pour les éléments dans chaque section
-      @for $item from 1 through 20 { 
-        .menu__main__sections__list__items:nth-child(#{$item}) {
-          animation-delay: #{$section-base-delay + ($item * $base-delay)};
-        }
-      }
-    }
-  }
-  
 /* +-----------------------------------------------------------+
             - Homepage - Media-queries - Tablette -
 +-----------------------------------------------------------+ */

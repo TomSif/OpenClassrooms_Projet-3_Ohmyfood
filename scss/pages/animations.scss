@@ -285,3 +285,38 @@
     }
   }
 
+
+/* +-----------------------------------------------------------+
+            - Menu -  Animation liste  -
++-----------------------------------------------------------+ */  
+
+// ### --- Animation liste---
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  
+
+$base-delay: 200ms; // Délai entre chaque élément
+$section-delay: 700ms; // Délai supplémentaire entre les sections
+
+// Boucle pour les sections
+@for $section from 1 through 3 {
+  .menu__main__sections:nth-of-type(#{$section}) {
+    // Délai de base pour cette section
+    $section-base-delay: ($section - 1) * $section-delay;
+    
+    // Boucle pour les éléments dans chaque section
+    @for $item from 1 through 20 { 
+      .menu__main__sections__list__items:nth-child(#{$item}) {
+        animation-delay: #{$section-base-delay + ($item * $base-delay)};
+      }
+    }
+  }
+}

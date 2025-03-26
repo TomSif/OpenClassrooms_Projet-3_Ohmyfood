@@ -6,6 +6,9 @@
                        _Variables FILE
 +-----------------------------------------------------------+ */
 /* +-----------------------------------------------------------+
+                       _mixins.scss FILE
++-----------------------------------------------------------+ */
+/* +-----------------------------------------------------------+
                      _Typography.scss FILE
 +-----------------------------------------------------------+ */
 .text-style-logo {
@@ -432,6 +435,202 @@
   }
 }
 /* +-----------------------------------------------------------+
+            - Menu -  Animation liste  -
++-----------------------------------------------------------+ */
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(1) {
+  animation-delay: 200ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(2) {
+  animation-delay: 400ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(3) {
+  animation-delay: 600ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(4) {
+  animation-delay: 800ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 1200ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(7) {
+  animation-delay: 1400ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(8) {
+  animation-delay: 1600ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 1800ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 2000ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(11) {
+  animation-delay: 2200ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 2400ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 2600ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(14) {
+  animation-delay: 2800ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 3000ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 3200ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(17) {
+  animation-delay: 3400ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 3600ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 3800ms;
+}
+.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(20) {
+  animation-delay: 4000ms;
+}
+
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(1) {
+  animation-delay: 900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(2) {
+  animation-delay: 1100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(3) {
+  animation-delay: 1300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(4) {
+  animation-delay: 1500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 1700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 1900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(7) {
+  animation-delay: 2100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(8) {
+  animation-delay: 2300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 2500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 2700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(11) {
+  animation-delay: 2900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 3100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 3300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(14) {
+  animation-delay: 3500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 3700ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 3900ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(17) {
+  animation-delay: 4100ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 4300ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 4500ms;
+}
+.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(20) {
+  animation-delay: 4700ms;
+}
+
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(1) {
+  animation-delay: 1600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(2) {
+  animation-delay: 1800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(3) {
+  animation-delay: 2000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(4) {
+  animation-delay: 2200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(5) {
+  animation-delay: 2400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(6) {
+  animation-delay: 2600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(7) {
+  animation-delay: 2800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(8) {
+  animation-delay: 3000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(9) {
+  animation-delay: 3200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(10) {
+  animation-delay: 3400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(11) {
+  animation-delay: 3600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(12) {
+  animation-delay: 3800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(13) {
+  animation-delay: 4000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(14) {
+  animation-delay: 4200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(15) {
+  animation-delay: 4400ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(16) {
+  animation-delay: 4600ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(17) {
+  animation-delay: 4800ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(18) {
+  animation-delay: 5000ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(19) {
+  animation-delay: 5200ms;
+}
+.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(20) {
+  animation-delay: 5400ms;
+}
+
+/* +-----------------------------------------------------------+
                         Main.scss FILE
 +-----------------------------------------------------------+ */
 /* +-----------------------------------------------------------+
@@ -733,7 +932,6 @@ a:focus {
   -webkit-mask-size: contain;
   mask-size: contain;
 }
-
 .heart-container i {
   color: transparent;
   background-image: linear-gradient(to right, rgb(16, 16, 16), rgb(16, 16, 16));
@@ -741,19 +939,9 @@ a:focus {
   -webkit-background-clip: text;
   transition: background-image 0.3s ease;
 }
-
-.heart-container:hover i {
+.heart-container i:hover, .heart-checkbox:checked + .heart-container i {
   background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
 }
-
-.heart-checkbox:checked + .heart-container i {
-  background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
-}
-
-.heart-checkbox:checked + .heart-container:hover i {
-  background-image: linear-gradient(6deg, rgba(147, 86, 220, 0.8) 25%, rgb(255, 121, 218) 150%);
-}
-
 .heart-container::after {
   content: "";
   position: absolute;
@@ -762,7 +950,6 @@ a:focus {
   transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
 }
-
 .heart-checkbox:checked + .heart-container::after {
   transform: translateY(0);
 }
@@ -1018,9 +1205,6 @@ a:focus {
   max-width: 100%;
   object-fit: cover;
 }
-.menu .menu__main section, .menu .menu__main__title-container {
-  max-width: 39.375rem;
-}
 .menu__main {
   width: 100%;
   padding: 2rem 0.875rem 2.4rem 0.875rem;
@@ -1036,6 +1220,9 @@ a:focus {
   gap: 2.4rem;
   max-width: 66rem;
   align-items: center;
+}
+.menu__main section, .menu__main__title-container {
+  max-width: 39.375rem;
 }
 .menu__main__title-container {
   display: flex;
@@ -1102,7 +1289,7 @@ a:focus {
   width: 100%;
   opacity: 0;
   animation: slideFromLeft 0.5s ease forwards;
-  /* Effet au survol sur desktop */
+  /* Effet au survol  */
   /* Effet quand la checkbox est cochée */
 }
 .menu__main__sections__list__items__label {
@@ -1192,11 +1379,11 @@ a:focus {
   border-radius: 0 1rem 1rem 0;
   outline: none;
 }
-.menu__main__sections__list__items .menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__chek-container {
+.menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__chek-container {
   width: 60px;
   border-radius: 0 1rem 1rem 0;
 }
-.menu__main__sections__list__items .menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__content {
+.menu__items-checkbox:checked ~ .menu__main__sections__list__items__wrapper .menu__main__sections__list__items__content {
   width: calc(100% - 60px);
   border-radius: 0 1rem 1rem 0;
 }
@@ -1228,199 +1415,6 @@ a:focus {
 }
 .menu__main__button:hover::after {
   opacity: 15%;
-}
-
-@keyframes slideFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 200ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(2) {
-  animation-delay: 400ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 600ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(4) {
-  animation-delay: 800ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 1000ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(6) {
-  animation-delay: 1200ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 1400ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(8) {
-  animation-delay: 1600ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 1800ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 2000ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 2200ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(12) {
-  animation-delay: 2400ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 2600ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 2800ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 3000ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(16) {
-  animation-delay: 3200ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 3400ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 3600ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 3800ms;
-}
-.menu__main__sections:nth-of-type(1) .menu__main__sections__list__items:nth-child(20) {
-  animation-delay: 4000ms;
-}
-
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 900ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(2) {
-  animation-delay: 1100ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 1300ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(4) {
-  animation-delay: 1500ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 1700ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(6) {
-  animation-delay: 1900ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 2100ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(8) {
-  animation-delay: 2300ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 2500ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 2700ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 2900ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(12) {
-  animation-delay: 3100ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 3300ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 3500ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 3700ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(16) {
-  animation-delay: 3900ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 4100ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 4300ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 4500ms;
-}
-.menu__main__sections:nth-of-type(2) .menu__main__sections__list__items:nth-child(20) {
-  animation-delay: 4700ms;
-}
-
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(1) {
-  animation-delay: 1600ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(2) {
-  animation-delay: 1800ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(3) {
-  animation-delay: 2000ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(4) {
-  animation-delay: 2200ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(5) {
-  animation-delay: 2400ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(6) {
-  animation-delay: 2600ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(7) {
-  animation-delay: 2800ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(8) {
-  animation-delay: 3000ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(9) {
-  animation-delay: 3200ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(10) {
-  animation-delay: 3400ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(11) {
-  animation-delay: 3600ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(12) {
-  animation-delay: 3800ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(13) {
-  animation-delay: 4000ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(14) {
-  animation-delay: 4200ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(15) {
-  animation-delay: 4400ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(16) {
-  animation-delay: 4600ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(17) {
-  animation-delay: 4800ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(18) {
-  animation-delay: 5000ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(19) {
-  animation-delay: 5200ms;
-}
-.menu__main__sections:nth-of-type(3) .menu__main__sections__list__items:nth-child(20) {
-  animation-delay: 5400ms;
 }
 
 /* +-----------------------------------------------------------+

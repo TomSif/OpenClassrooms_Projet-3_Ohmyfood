@@ -4,6 +4,7 @@
 
 // ### ---- IMPORTS ----
 @use "../abstracts/variables" as v;
+@use '../abstracts/mixins';
 @use "../base/typography" as t;
 @use "../base/fonts" as f;
 @use '../pages/animations.scss';

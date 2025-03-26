@@ -1,0 +1,28 @@
+/* +-----------------------------------------------------------+
+                       _mixins.scss FILE
++-----------------------------------------------------------+ */
+
+// Mixin pour la mask image
+@mixin mask-image($url) {
+    -webkit-mask-image: url($url);
+    mask-image: url($url);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+// Mixin pour le dégradé de texte
+@mixin text-gradient($gradient) {
+    color: transparent; 
+    background-image: $gradient; 
+    background-clip: text;
+    -webkit-background-clip: text; 
+}
+
+// Mixin pour les transitions
+@mixin smooth-transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
+}
