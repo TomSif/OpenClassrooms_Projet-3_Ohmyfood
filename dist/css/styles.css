@@ -195,6 +195,11 @@
   background-color: rgb(255, 255, 255);
   animation: fade-out 3.2s ease-in-out forwards;
 }
+@media (min-width: 1440px) {
+  .loader__informations {
+    height: 6.1rem;
+  }
+}
 
 .header__img-container {
   background-color: rgb(255, 255, 255);
@@ -266,6 +271,12 @@
   z-index: 99;
   background-color: #F3F3F3;
 }
+@media (min-width: 1440px) {
+  .text-container {
+    top: 6.3rem;
+    height: 5.5rem;
+  }
+}
 
 .loading-text {
   font-size: 1.2rem;
@@ -281,6 +292,11 @@
   text-align: center;
   justify-content: center;
   color: rgb(126, 126, 126);
+}
+@media (min-width: 1440px) {
+  .loading-text {
+    top: 7.4rem;
+  }
 }
 
 .loading-text:nth-child(1) {
