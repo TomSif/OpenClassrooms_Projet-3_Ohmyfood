@@ -170,7 +170,7 @@
   animation: fade-out 3.2s ease-in-out forwards;
   height: 150vh;
   background-color: rgb(255, 255, 255);
-  position: absolute;
+  position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -1448,7 +1448,7 @@ a:focus {
   width: 100%;
   color: rgb(255, 255, 255);
   position: relative;
-  z-index: 100;
+  z-index: 2;
   padding: 1.5rem;
   padding-bottom: 0.375rem;
 }
