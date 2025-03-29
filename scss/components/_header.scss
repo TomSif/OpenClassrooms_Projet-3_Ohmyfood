@@ -57,5 +57,9 @@
             flex-shrink: 1;
             max-width: 100%;
             object-fit: cover;
+
+            @media (min-width: 1440px){
+            margin-top: 1.7rem;
         }
     }
+}

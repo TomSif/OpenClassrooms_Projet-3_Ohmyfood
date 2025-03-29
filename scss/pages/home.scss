@@ -336,58 +336,13 @@ a:focus {
         inset: 0;
         background: v.$color-button-gradient; 
         transform: translateY(100%);
-        @include mixins.smooth-transition(transform, 0.5s, ease-in-out);
+        @include mixins.smooth-transition(transform, 0.3s, ease-in-out);
     }
 
     // Animation de remplissage au check
     .heart-checkbox:checked + & {
         &::after {
             transform: translateY(0);
-        }
-    }
-}
-
-// ### --- Footer ---
-.footer{
-    background-color: v.$color-grey;
-    padding: 1.5rem;
-    padding-bottom: 0.5rem;
-
-    &__img{
-        width: 6.25rem;
-        filter: invert(100%);
-    }
-
-    &__menu{
-        list-style: none;
-        gap: 0.5rem;
-        color: v.$color-white;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin-top: 1.25rem;
-
-
-        &__icon-1{
-            font-size: 0.875rem;
-            margin-right: 0.625rem;
-        }
-
-        &__icon-2{
-            font-size:0.875rem;
-            margin-right: 0.3rem;
-
-        }
-
-        &__item a{
-            display: inline-flex;
-            align-items: center;
-
-            & h4{
-                margin: 0;
-                line-height: 1.2;
-                padding: 0;
-            }
         }
     }
 }
@@ -441,32 +396,6 @@ a:focus {
             width: 100%;
             flex: 1 1 40%;
             }
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-
-        &__menu{
-        list-style: none;
-        gap: 0.5rem;
-        color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        margin-top: 1.25rem;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-            &__item{
-                align-items: center;
-                flex: 1 1 auto;
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
     }
 }
 

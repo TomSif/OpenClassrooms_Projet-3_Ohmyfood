@@ -111,6 +111,16 @@
     .menu__footer__list {
         padding: 0 clamp(1.5rem, 45%, 3rem);
     }
+
+    .menu__footer {
+        display: grid;
+        align-items: center;
+        padding-right: 2rem;
+        position: relative;
+        grid-template-columns: 1fr auto;
+        width: 100%;
+        padding-top: 3rem;
+    }
 }
 
 
